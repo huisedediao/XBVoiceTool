@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F11FEF3820E36F7D004691F8 /* 1529464328.caf in Resources */ = {isa = PBXBuildFile; fileRef = F11FEF3620E36F7C004691F8 /* 1529464328.caf */; };
+		F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */ = {isa = PBXBuildFile; fileRef = F11FEF3720E36F7C004691F8 /* 1530081783.caf */; };
+		F11FEF3D20E372C3004691F8 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F11FEF3B20E372C3004691F8 /* libmp3lame.a */; };
+		F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */; };
+		F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */; };
+		F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */; };
+		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
+		F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA620E5C0B100F901FA /* xbMedia.pcm */; };
+		F162EEA920E5C26900F901FA /* output.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA820E5C23700F901FA /* output.pcm */; };
+		F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */; };
+		F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C6820DA6D62005686CD /* AppDelegate.m */; };
+		F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C6B20DA6D62005686CD /* ViewController.m */; };
+		F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C6D20DA6D62005686CD /* Main.storyboard */; };
+		F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C7020DA6D62005686CD /* Assets.xcassets */; };
+		F16F7C7420DA6D62005686CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */; };
+		F16F7C7720DA6D62005686CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C7620DA6D62005686CD /* main.m */; };
+		F16F7C8120DA6D62005686CD /* XBVoiceToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C8020DA6D62005686CD /* XBVoiceToolTests.m */; };
+		F16F7C8C20DA6D62005686CD /* XBVoiceToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C8B20DA6D62005686CD /* XBVoiceToolUITests.m */; };
+		F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F1C70D3D20E6251000C1DFC5 /* record.pcm */; };
+		F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */; };
+		F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */; };
+		F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */; };
+		F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F16F7C7D20DA6D62005686CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16F7C5C20DA6D62005686CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16F7C6320DA6D62005686CD;
+			remoteInfo = XBVoiceTool;
+		};
+		F16F7C8820DA6D62005686CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16F7C5C20DA6D62005686CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16F7C6320DA6D62005686CD;
+			remoteInfo = XBVoiceTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F11FEF3620E36F7C004691F8 /* 1529464328.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1529464328.caf; sourceTree = "<group>"; };
+		F11FEF3720E36F7C004691F8 /* 1530081783.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1530081783.caf; sourceTree = "<group>"; };
+		F11FEF3B20E372C3004691F8 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		F11FEF3C20E372C3004691F8 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		F11FEF3E20E37C8A004691F8 /* XBAudioFormatConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioFormatConversion.h; sourceTree = "<group>"; };
+		F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioFormatConversion.m; sourceTree = "<group>"; };
+		F11FEF4620E382DC004691F8 /* Header_audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header_audio.h; sourceTree = "<group>"; };
+		F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "周杰伦 - 晴天.mp3"; sourceTree = "<group>"; };
+		F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia1.pcm; sourceTree = "<group>"; };
+		F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia2.pcm; sourceTree = "<group>"; };
+		F162EEA620E5C0B100F901FA /* xbMedia.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia.pcm; sourceTree = "<group>"; };
+		F162EEA820E5C23700F901FA /* output.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.pcm; sourceTree = "<group>"; };
+		F16932E820E4876800226DB1 /* XBAudioUnitRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitRecorder.h; sourceTree = "<group>"; };
+		F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitRecorder.m; sourceTree = "<group>"; };
+		F16F7C6420DA6D62005686CD /* XBVoiceTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBVoiceTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F7C6720DA6D62005686CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F16F7C6820DA6D62005686CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F16F7C6A20DA6D62005686CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F16F7C6B20DA6D62005686CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F16F7C6E20DA6D62005686CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F16F7C7020DA6D62005686CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F16F7C7320DA6D62005686CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F16F7C7520DA6D62005686CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16F7C7620DA6D62005686CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F16F7C7C20DA6D62005686CD /* XBVoiceToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XBVoiceToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F7C8020DA6D62005686CD /* XBVoiceToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVoiceToolTests.m; sourceTree = "<group>"; };
+		F16F7C8220DA6D62005686CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16F7C8720DA6D62005686CD /* XBVoiceToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XBVoiceToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16F7C8B20DA6D62005686CD /* XBVoiceToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVoiceToolUITests.m; sourceTree = "<group>"; };
+		F16F7C8D20DA6D62005686CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1C70D3D20E6251000C1DFC5 /* record.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = record.pcm; sourceTree = "<group>"; };
+		F1C70D3F20E62FA100C1DFC5 /* XBAudioUnitPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitPlayer.h; sourceTree = "<group>"; };
+		F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitPlayer.m; sourceTree = "<group>"; };
+		F1C70D4220E9B29B00C1DFC5 /* XBPCMPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPCMPlayer.h; sourceTree = "<group>"; };
+		F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPCMPlayer.m; sourceTree = "<group>"; };
+		F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitMixer.h; sourceTree = "<group>"; };
+		F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitMixer.m; sourceTree = "<group>"; };
+		F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataReader.h; sourceTree = "<group>"; };
+		F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataReader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F16F7C6120DA6D62005686CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11FEF3D20E372C3004691F8 /* libmp3lame.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C7920DA6D62005686CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C8420DA6D62005686CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F11FEF3A20E372C3004691F8 /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				F11FEF3B20E372C3004691F8 /* libmp3lame.a */,
+				F11FEF3C20E372C3004691F8 /* lame.h */,
+			);
+			path = lame;
+			sourceTree = "<group>";
+		};
+		F13DD76F20DB880000D1519D /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F11FEF4620E382DC004691F8 /* Header_audio.h */,
+				F11FEF3E20E37C8A004691F8 /* XBAudioFormatConversion.h */,
+				F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */,
+				F16932E820E4876800226DB1 /* XBAudioUnitRecorder.h */,
+				F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */,
+				F1C70D3F20E62FA100C1DFC5 /* XBAudioUnitPlayer.h */,
+				F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */,
+				F1C70D4220E9B29B00C1DFC5 /* XBPCMPlayer.h */,
+				F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */,
+				F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixer.h */,
+				F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */,
+				F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */,
+				F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		F13DD77420DB884E00D1519D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F1C70D3D20E6251000C1DFC5 /* record.pcm */,
+				F162EEA820E5C23700F901FA /* output.pcm */,
+				F162EEA620E5C0B100F901FA /* xbMedia.pcm */,
+				F11FEF3620E36F7C004691F8 /* 1529464328.caf */,
+				F11FEF3720E36F7C004691F8 /* 1530081783.caf */,
+				F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */,
+				F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */,
+				F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F16F7C5B20DA6D62005686CD = {
+			isa = PBXGroup;
+			children = (
+				F16F7C6620DA6D62005686CD /* XBVoiceTool */,
+				F16F7C7F20DA6D62005686CD /* XBVoiceToolTests */,
+				F16F7C8A20DA6D62005686CD /* XBVoiceToolUITests */,
+				F16F7C6520DA6D62005686CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16F7C6520DA6D62005686CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16F7C6420DA6D62005686CD /* XBVoiceTool.app */,
+				F16F7C7C20DA6D62005686CD /* XBVoiceToolTests.xctest */,
+				F16F7C8720DA6D62005686CD /* XBVoiceToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16F7C6620DA6D62005686CD /* XBVoiceTool */ = {
+			isa = PBXGroup;
+			children = (
+				F11FEF3A20E372C3004691F8 /* lame */,
+				F13DD77420DB884E00D1519D /* Source */,
+				F13DD76F20DB880000D1519D /* AudioPlayer */,
+				F16F7C6720DA6D62005686CD /* AppDelegate.h */,
+				F16F7C6820DA6D62005686CD /* AppDelegate.m */,
+				F16F7C6A20DA6D62005686CD /* ViewController.h */,
+				F16F7C6B20DA6D62005686CD /* ViewController.m */,
+				F16F7C6D20DA6D62005686CD /* Main.storyboard */,
+				F16F7C7020DA6D62005686CD /* Assets.xcassets */,
+				F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */,
+				F16F7C7520DA6D62005686CD /* Info.plist */,
+				F16F7C7620DA6D62005686CD /* main.m */,
+			);
+			path = XBVoiceTool;
+			sourceTree = "<group>";
+		};
+		F16F7C7F20DA6D62005686CD /* XBVoiceToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				F16F7C8020DA6D62005686CD /* XBVoiceToolTests.m */,
+				F16F7C8220DA6D62005686CD /* Info.plist */,
+			);
+			path = XBVoiceToolTests;
+			sourceTree = "<group>";
+		};
+		F16F7C8A20DA6D62005686CD /* XBVoiceToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F16F7C8B20DA6D62005686CD /* XBVoiceToolUITests.m */,
+				F16F7C8D20DA6D62005686CD /* Info.plist */,
+			);
+			path = XBVoiceToolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16F7C6320DA6D62005686CD /* XBVoiceTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16F7C9020DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceTool" */;
+			buildPhases = (
+				F16F7C6020DA6D62005686CD /* Sources */,
+				F16F7C6120DA6D62005686CD /* Frameworks */,
+				F16F7C6220DA6D62005686CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XBVoiceTool;
+			productName = XBVoiceTool;
+			productReference = F16F7C6420DA6D62005686CD /* XBVoiceTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F16F7C7B20DA6D62005686CD /* XBVoiceToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16F7C9320DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceToolTests" */;
+			buildPhases = (
+				F16F7C7820DA6D62005686CD /* Sources */,
+				F16F7C7920DA6D62005686CD /* Frameworks */,
+				F16F7C7A20DA6D62005686CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16F7C7E20DA6D62005686CD /* PBXTargetDependency */,
+			);
+			name = XBVoiceToolTests;
+			productName = XBVoiceToolTests;
+			productReference = F16F7C7C20DA6D62005686CD /* XBVoiceToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F16F7C8620DA6D62005686CD /* XBVoiceToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16F7C9620DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceToolUITests" */;
+			buildPhases = (
+				F16F7C8320DA6D62005686CD /* Sources */,
+				F16F7C8420DA6D62005686CD /* Frameworks */,
+				F16F7C8520DA6D62005686CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16F7C8920DA6D62005686CD /* PBXTargetDependency */,
+			);
+			name = XBVoiceToolUITests;
+			productName = XBVoiceToolUITests;
+			productReference = F16F7C8720DA6D62005686CD /* XBVoiceToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F16F7C5C20DA6D62005686CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = xxb;
+				TargetAttributes = {
+					F16F7C6320DA6D62005686CD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F16F7C7B20DA6D62005686CD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F16F7C6320DA6D62005686CD;
+					};
+					F16F7C8620DA6D62005686CD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F16F7C6320DA6D62005686CD;
+					};
+				};
+			};
+			buildConfigurationList = F16F7C5F20DA6D62005686CD /* Build configuration list for PBXProject "XBVoiceTool" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16F7C5B20DA6D62005686CD;
+			productRefGroup = F16F7C6520DA6D62005686CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16F7C6320DA6D62005686CD /* XBVoiceTool */,
+				F16F7C7B20DA6D62005686CD /* XBVoiceToolTests */,
+				F16F7C8620DA6D62005686CD /* XBVoiceToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16F7C6220DA6D62005686CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16F7C7420DA6D62005686CD /* LaunchScreen.storyboard in Resources */,
+				F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */,
+				F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */,
+				F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */,
+				F162EEA920E5C26900F901FA /* output.pcm in Resources */,
+				F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */,
+				F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */,
+				F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */,
+				F11FEF3820E36F7D004691F8 /* 1529464328.caf in Resources */,
+				F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */,
+				F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C7A20DA6D62005686CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C8520DA6D62005686CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F16F7C6020DA6D62005686CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */,
+				F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */,
+				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */,
+				F16F7C7720DA6D62005686CD /* main.m in Sources */,
+				F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */,
+				F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */,
+				F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */,
+				F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */,
+				F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C7820DA6D62005686CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16F7C8120DA6D62005686CD /* XBVoiceToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16F7C8320DA6D62005686CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16F7C8C20DA6D62005686CD /* XBVoiceToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F16F7C7E20DA6D62005686CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16F7C6320DA6D62005686CD /* XBVoiceTool */;
+			targetProxy = F16F7C7D20DA6D62005686CD /* PBXContainerItemProxy */;
+		};
+		F16F7C8920DA6D62005686CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16F7C6320DA6D62005686CD /* XBVoiceTool */;
+			targetProxy = F16F7C8820DA6D62005686CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F16F7C6D20DA6D62005686CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16F7C6E20DA6D62005686CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F16F7C7320DA6D62005686CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F16F7C8E20DA6D62005686CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F16F7C8F20DA6D62005686CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F16F7C9120DA6D62005686CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RC2BP8QGY9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = XBVoiceTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XBVoiceTool/lame",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F16F7C9220DA6D62005686CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RC2BP8QGY9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = XBVoiceTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XBVoiceTool/lame",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F16F7C9420DA6D62005686CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XBVoiceToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XBVoiceTool.app/XBVoiceTool";
+			};
+			name = Debug;
+		};
+		F16F7C9520DA6D62005686CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XBVoiceToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XBVoiceTool.app/XBVoiceTool";
+			};
+			name = Release;
+		};
+		F16F7C9720DA6D62005686CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XBVoiceToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XBVoiceTool;
+			};
+			name = Debug;
+		};
+		F16F7C9820DA6D62005686CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XBVoiceToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = XBAnimation.XBVoiceToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XBVoiceTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F16F7C5F20DA6D62005686CD /* Build configuration list for PBXProject "XBVoiceTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16F7C8E20DA6D62005686CD /* Debug */,
+				F16F7C8F20DA6D62005686CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16F7C9020DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16F7C9120DA6D62005686CD /* Debug */,
+				F16F7C9220DA6D62005686CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16F7C9320DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16F7C9420DA6D62005686CD /* Debug */,
+				F16F7C9520DA6D62005686CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16F7C9620DA6D62005686CD /* Build configuration list for PBXNativeTarget "XBVoiceToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16F7C9720DA6D62005686CD /* Debug */,
+				F16F7C9820DA6D62005686CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F16F7C5C20DA6D62005686CD /* Project object */;
+}
