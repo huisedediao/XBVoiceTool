@@ -12,7 +12,7 @@
 typedef void (^XBAudioUnitRecorderOnputBlock)(AudioBufferList *bufferList);
 
 @interface XBAudioUnitRecorder : NSObject
-@property (nonatomic,copy) XBAudioUnitRecorderOnputBlock bl_outputBlock;
+@property (nonatomic,copy) XBAudioUnitRecorderOnputBlock bl_output;
 - (instancetype)initWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel;
 - (void)start;
 - (void)stop;

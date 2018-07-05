@@ -30,6 +30,7 @@
 		F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */; };
 		F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */; };
 		F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */; };
+		F1F055C020EDC47F0073CE8D /* XBAudioDataWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitMixer.m; sourceTree = "<group>"; };
 		F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataReader.h; sourceTree = "<group>"; };
 		F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataReader.m; sourceTree = "<group>"; };
+		F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataWriter.h; sourceTree = "<group>"; };
+		F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */,
 				F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */,
 				F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */,
+				F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */,
+				F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */,
 				F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */,
 				F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */,
+				F1F055C020EDC47F0073CE8D /* XBAudioDataWriter.m in Sources */,
 				F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */,
 				F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */,
 			);

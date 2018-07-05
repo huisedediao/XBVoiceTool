@@ -24,11 +24,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    [self startMix];
+    [self startMix];
     
 //    [self record];
     
-    [self play];
+//    [self play];
 }
 
 

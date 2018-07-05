@@ -148,9 +148,9 @@ static OSStatus inputCallBackFun(    void *                            inRefCon,
                     inNumberFrames,
                     &bufferList);
     
-    if (recorder.bl_outputBlock)
+    if (recorder.bl_output)
     {
-        recorder.bl_outputBlock(&bufferList);
+        recorder.bl_output(&bufferList);
     }
     
 //    AudioBuffer buffer = bufferList.mBuffers[0];
