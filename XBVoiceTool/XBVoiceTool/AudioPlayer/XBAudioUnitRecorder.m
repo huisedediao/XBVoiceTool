@@ -7,6 +7,7 @@
 //
 
 #import "XBAudioUnitRecorder.h"
+#import "XBAudioTool.h"
 
 #define subPathPCM @"/Documents/xbMedia"
 #define stroePath [NSHomeDirectory() stringByAppendingString:subPathPCM]
@@ -56,29 +57,15 @@
     [session setActive:YES error:nil];
     
     //初始化audioUnit
-    AudioComponentDescription inputDesc;
-    inputDesc.componentType = kAudioUnitType_Output;
-    inputDesc.componentSubType = kAudioUnitSubType_RemoteIO;
-    inputDesc.componentManufacturer = kAudioUnitManufacturer_Apple;
-    inputDesc.componentFlags = 0;
-    inputDesc.componentFlagsMask = 0;
+    AudioComponentDescription inputDesc = [XBAudioTool allocAudioComponentDescriptionWithComponentType:kAudioUnitType_Output componentSubType:kAudioUnitSubType_RemoteIO componentFlags:0 componentFlagsMask:0];
     AudioComponent inputComponent = AudioComponentFindNext(NULL, &inputDesc);
     AudioComponentInstanceNew(inputComponent, &audioUnit);
     
 
     //设置输出流格式
     int mFramesPerPacket = 1;
-    int mBytesPerFrame = bit * channel / 8;
     
-    AudioStreamBasicDescription inputStreamDesc;
-    inputStreamDesc.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved | kAudioFormatFlagIsPacked;
-    inputStreamDesc.mFormatID = kAudioFormatLinearPCM;
-    inputStreamDesc.mSampleRate = rate;
-    inputStreamDesc.mFramesPerPacket = mFramesPerPacket;
-    inputStreamDesc.mBitsPerChannel = bit;
-    inputStreamDesc.mChannelsPerFrame = channel;
-    inputStreamDesc.mBytesPerFrame = mBytesPerFrame;
-    inputStreamDesc.mBytesPerPacket = mFramesPerPacket *  mBytesPerFrame;
+    AudioStreamBasicDescription inputStreamDesc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:(kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved | kAudioFormatFlagIsPacked) mSampleRate:rate mFramesPerPacket:mFramesPerPacket mChannelsPerFrame:channel mBitsPerChannel:bit];
     
     OSStatus status = AudioUnitSetProperty(audioUnit,
                          kAudioUnitProperty_StreamFormat,
@@ -152,19 +139,6 @@ static OSStatus inputCallBackFun(    void *                            inRefCon,
     {
         recorder.bl_output(&bufferList);
     }
-    
-//    AudioBuffer buffer = bufferList.mBuffers[0];
-//    NSData *pcmBlock = [NSData dataWithBytes:buffer.mData length:buffer.mDataByteSize];
-//
-//    NSLog(@"------->>数据%@",pcmBlock);
-//    NSString *savePath = stroePath;
-//    if ([[NSFileManager defaultManager] fileExistsAtPath:savePath] == false)
-//    {
-//        [[NSFileManager defaultManager] createFileAtPath:savePath contents:nil attributes:nil];
-//    }
-//    NSFileHandle * handle = [NSFileHandle fileHandleForWritingAtPath:savePath];
-//    [handle seekToEndOfFile];
-//    [handle writeData:pcmBlock];
     
     return noErr;
 }

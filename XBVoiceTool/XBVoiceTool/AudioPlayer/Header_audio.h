@@ -12,12 +12,16 @@
 #define kInputBus (1)
 #define kOutputBus (0)
 
+#define NO_MORE_DATA (-12306)
+
 #import <AudioUnit/AudioUnit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Header_audio.h"
 #import <assert.h>
 
 #define kPreferredIOBufferDuration (0.05)
+
+#define CONST_BUFFER_SIZE (0x10000)
 
 typedef enum : NSUInteger {
     XBVoiceRate_8k = 8000,

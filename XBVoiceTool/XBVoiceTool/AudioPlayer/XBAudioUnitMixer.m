@@ -15,7 +15,7 @@
 #define subPathPCM @"/Documents/xbMixData"
 #define stroePath [NSHomeDirectory() stringByAppendingString:subPathPCM]
 
-#define CONST_BUFFER_SIZE 2048*2*10
+//#define CONST_BUFFER_SIZE 2048*2*10
 
 @interface XBAudioUnitMixer ()
 {

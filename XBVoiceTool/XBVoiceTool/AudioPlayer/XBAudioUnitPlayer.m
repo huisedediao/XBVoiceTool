@@ -7,6 +7,7 @@
 //
 
 #import "XBAudioUnitPlayer.h"
+#import "XBAudioTool.h"
 
 @interface XBAudioUnitPlayer ()
 {
@@ -55,12 +56,7 @@
     [session setActive:YES error:nil];
     
     //初始化audioUnit
-    AudioComponentDescription outputDesc;
-    outputDesc.componentType = kAudioUnitType_Output;
-    outputDesc.componentSubType = kAudioUnitSubType_VoiceProcessingIO;
-    outputDesc.componentManufacturer = kAudioUnitManufacturer_Apple;
-    outputDesc.componentFlags = 0;
-    outputDesc.componentFlagsMask = 0;
+    AudioComponentDescription outputDesc = [XBAudioTool allocAudioComponentDescriptionWithComponentType:kAudioUnitType_Output componentSubType:kAudioUnitSubType_VoiceProcessingIO componentFlags:0 componentFlagsMask:0];
     AudioComponent outputComponent = AudioComponentFindNext(NULL, &outputDesc);
     AudioComponentInstanceNew(outputComponent, &audioUnit);
     
@@ -68,17 +64,8 @@
     
     //设置输出格式
     int mFramesPerPacket = 1;
-    int mBytesPerFrame = channel * bit / 8;
     
-    AudioStreamBasicDescription streamDesc;
-    streamDesc.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved;
-    streamDesc.mFormatID = kAudioFormatLinearPCM;
-    streamDesc.mSampleRate = rate;
-    streamDesc.mFramesPerPacket = mFramesPerPacket;
-    streamDesc.mChannelsPerFrame = channel;
-    streamDesc.mBitsPerChannel = bit;
-    streamDesc.mBytesPerFrame = mBytesPerFrame;
-    streamDesc.mBytesPerPacket = mBytesPerFrame * mFramesPerPacket;
+    AudioStreamBasicDescription streamDesc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:(kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved) mSampleRate:rate mFramesPerPacket:mFramesPerPacket mChannelsPerFrame:channel mBitsPerChannel:bit];
     
     OSStatus status = AudioUnitSetProperty(audioUnit,
                                            kAudioUnitProperty_StreamFormat,
@@ -131,6 +118,10 @@ static OSStatus outputCallBackFun(    void *                            inRefCon
     if (player.bl_input)
     {
         player.bl_input(ioData);
+    }
+    if (player.bl_inputFull)
+    {
+        player.bl_inputFull(player, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, ioData);
     }
     return noErr;
 }

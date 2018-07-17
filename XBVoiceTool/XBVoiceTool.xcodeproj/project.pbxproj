@@ -14,6 +14,8 @@
 		F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */; };
 		F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */; };
 		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
+		F161207620F48DBD005A3A0F /* XBAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F161207520F48DBD005A3A0F /* XBAudioPlayer.m */; };
+		F161207C20F4BA37005A3A0F /* 几个你_薛之谦.aac in Resources */ = {isa = PBXBuildFile; fileRef = F161207B20F4BA37005A3A0F /* 几个你_薛之谦.aac */; };
 		F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA620E5C0B100F901FA /* xbMedia.pcm */; };
 		F162EEA920E5C26900F901FA /* output.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA820E5C23700F901FA /* output.pcm */; };
 		F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */; };
@@ -31,6 +33,8 @@
 		F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */; };
 		F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */; };
 		F1F055C020EDC47F0073CE8D /* XBAudioDataWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */; };
+		F1F055C620EE043F0073CE8D /* XBAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055C520EE043F0073CE8D /* XBAudioTool.m */; };
+		F1F055C920EE1BFA0073CE8D /* XBAudioConverterPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,9 @@
 		F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "周杰伦 - 晴天.mp3"; sourceTree = "<group>"; };
 		F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia1.pcm; sourceTree = "<group>"; };
 		F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia2.pcm; sourceTree = "<group>"; };
+		F161207420F48DBD005A3A0F /* XBAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioPlayer.h; sourceTree = "<group>"; };
+		F161207520F48DBD005A3A0F /* XBAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioPlayer.m; sourceTree = "<group>"; };
+		F161207B20F4BA37005A3A0F /* 几个你_薛之谦.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "几个你_薛之谦.aac"; sourceTree = "<group>"; };
 		F162EEA620E5C0B100F901FA /* xbMedia.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia.pcm; sourceTree = "<group>"; };
 		F162EEA820E5C23700F901FA /* output.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.pcm; sourceTree = "<group>"; };
 		F16932E820E4876800226DB1 /* XBAudioUnitRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitRecorder.h; sourceTree = "<group>"; };
@@ -92,6 +99,10 @@
 		F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataReader.m; sourceTree = "<group>"; };
 		F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataWriter.h; sourceTree = "<group>"; };
 		F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataWriter.m; sourceTree = "<group>"; };
+		F1F055C420EE043F0073CE8D /* XBAudioTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioTool.h; sourceTree = "<group>"; };
+		F1F055C520EE043F0073CE8D /* XBAudioTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioTool.m; sourceTree = "<group>"; };
+		F1F055C720EE1BFA0073CE8D /* XBAudioConverterPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioConverterPlayer.h; sourceTree = "<group>"; };
+		F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioConverterPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +158,12 @@
 				F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */,
 				F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */,
 				F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */,
+				F1F055C420EE043F0073CE8D /* XBAudioTool.h */,
+				F1F055C520EE043F0073CE8D /* XBAudioTool.m */,
+				F1F055C720EE1BFA0073CE8D /* XBAudioConverterPlayer.h */,
+				F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */,
+				F161207420F48DBD005A3A0F /* XBAudioPlayer.h */,
+				F161207520F48DBD005A3A0F /* XBAudioPlayer.m */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -162,6 +179,7 @@
 				F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */,
 				F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */,
 				F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */,
+				F161207B20F4BA37005A3A0F /* 几个你_薛之谦.aac */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -336,6 +354,7 @@
 				F162EEA920E5C26900F901FA /* output.pcm in Resources */,
 				F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */,
 				F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */,
+				F161207C20F4BA37005A3A0F /* 几个你_薛之谦.aac in Resources */,
 				F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */,
 				F11FEF3820E36F7D004691F8 /* 1529464328.caf in Resources */,
 				F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */,
@@ -365,7 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */,
+				F161207620F48DBD005A3A0F /* XBAudioPlayer.m in Sources */,
 				F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */,
+				F1F055C620EE043F0073CE8D /* XBAudioTool.m in Sources */,
+				F1F055C920EE1BFA0073CE8D /* XBAudioConverterPlayer.m in Sources */,
 				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */,
 				F16F7C7720DA6D62005686CD /* main.m in Sources */,
 				F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */,
