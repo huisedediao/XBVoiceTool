@@ -11,6 +11,9 @@
 		F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */ = {isa = PBXBuildFile; fileRef = F11FEF3720E36F7C004691F8 /* 1530081783.caf */; };
 		F11FEF3D20E372C3004691F8 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F11FEF3B20E372C3004691F8 /* libmp3lame.a */; };
 		F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */; };
+		F130CAAE2105D44C000213FA /* XBAudioFileDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F130CAAD2105D44C000213FA /* XBAudioFileDataReader.m */; };
+		F130CAB22107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F130CAB12107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 */; };
+		F130CABE21072AF1000213FA /* xbMixMusic.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F130CABD21072AF1000213FA /* xbMixMusic.pcm */; };
 		F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */; };
 		F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */; };
 		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
@@ -30,11 +33,17 @@
 		F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F1C70D3D20E6251000C1DFC5 /* record.pcm */; };
 		F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */; };
 		F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */; };
-		F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */; };
-		F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */; };
-		F1F055C020EDC47F0073CE8D /* XBAudioDataWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */; };
+		F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m */; };
+		F1C70D4A20E9CB9400C1DFC5 /* XBAudioPCMDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4920E9CB9400C1DFC5 /* XBAudioPCMDataReader.m */; };
+		F1E0FFFA20FF33450021EC7D /* XBAudioUnitMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E0FFF920FF33450021EC7D /* XBAudioUnitMixer.m */; };
+		F1F055C020EDC47F0073CE8D /* XBDataWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055BF20EDC47F0073CE8D /* XBDataWriter.m */; };
 		F1F055C620EE043F0073CE8D /* XBAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055C520EE043F0073CE8D /* XBAudioTool.m */; };
 		F1F055C920EE1BFA0073CE8D /* XBAudioConverterPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */; };
+		F1F83D29210751920005C272 /* XBExtAudioFileRef.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F83D28210751920005C272 /* XBExtAudioFileRef.m */; };
+		F1F83D2C21085F050005C272 /* ExtAudioFileMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F83D2B21085F050005C272 /* ExtAudioFileMixer.m */; };
+		F1F83D2E210861F40005C272 /* xbMixMusicTest.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1F83D2D210861F40005C272 /* xbMixMusicTest.caf */; };
+		F1F83D3021096BD10005C272 /* xbMixData.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1F83D2F21096BD10005C272 /* xbMixData.caf */; };
+		F1F83D3221096CA50005C272 /* recordTest.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1F83D3121096CA50005C272 /* recordTest.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +71,10 @@
 		F11FEF3E20E37C8A004691F8 /* XBAudioFormatConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioFormatConversion.h; sourceTree = "<group>"; };
 		F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioFormatConversion.m; sourceTree = "<group>"; };
 		F11FEF4620E382DC004691F8 /* Header_audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header_audio.h; sourceTree = "<group>"; };
+		F130CAAC2105D44C000213FA /* XBAudioFileDataReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioFileDataReader.h; sourceTree = "<group>"; };
+		F130CAAD2105D44C000213FA /* XBAudioFileDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioFileDataReader.m; sourceTree = "<group>"; };
+		F130CAB12107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "胡彦斌 - 为你我受冷风吹.mp3"; sourceTree = "<group>"; };
+		F130CABD21072AF1000213FA /* xbMixMusic.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMixMusic.pcm; sourceTree = "<group>"; };
 		F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "周杰伦 - 晴天.mp3"; sourceTree = "<group>"; };
 		F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia1.pcm; sourceTree = "<group>"; };
 		F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia2.pcm; sourceTree = "<group>"; };
@@ -93,16 +106,25 @@
 		F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitPlayer.m; sourceTree = "<group>"; };
 		F1C70D4220E9B29B00C1DFC5 /* XBPCMPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBPCMPlayer.h; sourceTree = "<group>"; };
 		F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBPCMPlayer.m; sourceTree = "<group>"; };
-		F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitMixer.h; sourceTree = "<group>"; };
-		F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitMixer.m; sourceTree = "<group>"; };
-		F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataReader.h; sourceTree = "<group>"; };
-		F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataReader.m; sourceTree = "<group>"; };
-		F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioDataWriter.h; sourceTree = "<group>"; };
-		F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataWriter.m; sourceTree = "<group>"; };
+		F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitMixerTest.h; sourceTree = "<group>"; };
+		F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitMixerTest.m; sourceTree = "<group>"; };
+		F1C70D4820E9CB9400C1DFC5 /* XBAudioPCMDataReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioPCMDataReader.h; sourceTree = "<group>"; };
+		F1C70D4920E9CB9400C1DFC5 /* XBAudioPCMDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioPCMDataReader.m; sourceTree = "<group>"; };
+		F1E0FFF820FF33450021EC7D /* XBAudioUnitMixer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitMixer.h; sourceTree = "<group>"; };
+		F1E0FFF920FF33450021EC7D /* XBAudioUnitMixer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitMixer.m; sourceTree = "<group>"; };
+		F1F055BE20EDC47F0073CE8D /* XBDataWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBDataWriter.h; sourceTree = "<group>"; };
+		F1F055BF20EDC47F0073CE8D /* XBDataWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDataWriter.m; sourceTree = "<group>"; };
 		F1F055C420EE043F0073CE8D /* XBAudioTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioTool.h; sourceTree = "<group>"; };
 		F1F055C520EE043F0073CE8D /* XBAudioTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioTool.m; sourceTree = "<group>"; };
 		F1F055C720EE1BFA0073CE8D /* XBAudioConverterPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioConverterPlayer.h; sourceTree = "<group>"; };
 		F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioConverterPlayer.m; sourceTree = "<group>"; };
+		F1F83D27210751920005C272 /* XBExtAudioFileRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBExtAudioFileRef.h; sourceTree = "<group>"; };
+		F1F83D28210751920005C272 /* XBExtAudioFileRef.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBExtAudioFileRef.m; sourceTree = "<group>"; };
+		F1F83D2A21085F050005C272 /* ExtAudioFileMixer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtAudioFileMixer.h; sourceTree = "<group>"; };
+		F1F83D2B21085F050005C272 /* ExtAudioFileMixer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtAudioFileMixer.m; sourceTree = "<group>"; };
+		F1F83D2D210861F40005C272 /* xbMixMusicTest.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMixMusicTest.caf; sourceTree = "<group>"; };
+		F1F83D2F21096BD10005C272 /* xbMixData.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMixData.caf; sourceTree = "<group>"; };
+		F1F83D3121096CA50005C272 /* recordTest.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = recordTest.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,18 +174,24 @@
 				F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */,
 				F1C70D4220E9B29B00C1DFC5 /* XBPCMPlayer.h */,
 				F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */,
-				F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixer.h */,
-				F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixer.m */,
-				F1C70D4820E9CB9400C1DFC5 /* XBAudioDataReader.h */,
-				F1C70D4920E9CB9400C1DFC5 /* XBAudioDataReader.m */,
-				F1F055BE20EDC47F0073CE8D /* XBAudioDataWriter.h */,
-				F1F055BF20EDC47F0073CE8D /* XBAudioDataWriter.m */,
+				F1C70D4520E9C4E200C1DFC5 /* XBAudioUnitMixerTest.h */,
+				F1C70D4620E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m */,
+				F1C70D4820E9CB9400C1DFC5 /* XBAudioPCMDataReader.h */,
+				F1C70D4920E9CB9400C1DFC5 /* XBAudioPCMDataReader.m */,
+				F1F055BE20EDC47F0073CE8D /* XBDataWriter.h */,
+				F1F055BF20EDC47F0073CE8D /* XBDataWriter.m */,
 				F1F055C420EE043F0073CE8D /* XBAudioTool.h */,
 				F1F055C520EE043F0073CE8D /* XBAudioTool.m */,
 				F1F055C720EE1BFA0073CE8D /* XBAudioConverterPlayer.h */,
 				F1F055C820EE1BFA0073CE8D /* XBAudioConverterPlayer.m */,
 				F161207420F48DBD005A3A0F /* XBAudioPlayer.h */,
 				F161207520F48DBD005A3A0F /* XBAudioPlayer.m */,
+				F1E0FFF820FF33450021EC7D /* XBAudioUnitMixer.h */,
+				F1E0FFF920FF33450021EC7D /* XBAudioUnitMixer.m */,
+				F130CAAC2105D44C000213FA /* XBAudioFileDataReader.h */,
+				F130CAAD2105D44C000213FA /* XBAudioFileDataReader.m */,
+				F1F83D27210751920005C272 /* XBExtAudioFileRef.h */,
+				F1F83D28210751920005C272 /* XBExtAudioFileRef.m */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -171,6 +199,11 @@
 		F13DD77420DB884E00D1519D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F1F83D3121096CA50005C272 /* recordTest.caf */,
+				F1F83D2F21096BD10005C272 /* xbMixData.caf */,
+				F1F83D2D210861F40005C272 /* xbMixMusicTest.caf */,
+				F130CABD21072AF1000213FA /* xbMixMusic.pcm */,
+				F130CAB12107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 */,
 				F1C70D3D20E6251000C1DFC5 /* record.pcm */,
 				F162EEA820E5C23700F901FA /* output.pcm */,
 				F162EEA620E5C0B100F901FA /* xbMedia.pcm */,
@@ -219,6 +252,8 @@
 				F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */,
 				F16F7C7520DA6D62005686CD /* Info.plist */,
 				F16F7C7620DA6D62005686CD /* main.m */,
+				F1F83D2A21085F050005C272 /* ExtAudioFileMixer.h */,
+				F1F83D2B21085F050005C272 /* ExtAudioFileMixer.m */,
 			);
 			path = XBVoiceTool;
 			sourceTree = "<group>";
@@ -347,12 +382,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F83D3221096CA50005C272 /* recordTest.caf in Resources */,
 				F16F7C7420DA6D62005686CD /* LaunchScreen.storyboard in Resources */,
 				F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */,
 				F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */,
+				F1F83D2E210861F40005C272 /* xbMixMusicTest.caf in Resources */,
+				F130CABE21072AF1000213FA /* xbMixMusic.pcm in Resources */,
 				F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */,
 				F162EEA920E5C26900F901FA /* output.pcm in Resources */,
+				F1F83D3021096BD10005C272 /* xbMixData.caf in Resources */,
 				F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */,
+				F130CAB22107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 in Resources */,
 				F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */,
 				F161207C20F4BA37005A3A0F /* 几个你_薛之谦.aac in Resources */,
 				F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */,
@@ -388,14 +428,18 @@
 				F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */,
 				F1F055C620EE043F0073CE8D /* XBAudioTool.m in Sources */,
 				F1F055C920EE1BFA0073CE8D /* XBAudioConverterPlayer.m in Sources */,
-				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixer.m in Sources */,
+				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m in Sources */,
+				F1E0FFFA20FF33450021EC7D /* XBAudioUnitMixer.m in Sources */,
 				F16F7C7720DA6D62005686CD /* main.m in Sources */,
+				F1F83D2C21085F050005C272 /* ExtAudioFileMixer.m in Sources */,
+				F1F83D29210751920005C272 /* XBExtAudioFileRef.m in Sources */,
 				F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */,
 				F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */,
 				F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */,
-				F1F055C020EDC47F0073CE8D /* XBAudioDataWriter.m in Sources */,
-				F1C70D4A20E9CB9400C1DFC5 /* XBAudioDataReader.m in Sources */,
+				F1F055C020EDC47F0073CE8D /* XBDataWriter.m in Sources */,
+				F1C70D4A20E9CB9400C1DFC5 /* XBAudioPCMDataReader.m in Sources */,
 				F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */,
+				F130CAAE2105D44C000213FA /* XBAudioFileDataReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

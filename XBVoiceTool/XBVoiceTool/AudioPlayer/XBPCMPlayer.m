@@ -8,23 +8,23 @@
 
 #import "XBPCMPlayer.h"
 #import "XBAudioUnitPlayer.h"
-#import "XBAudioDataReader.h"
+#import "XBAudioPCMDataReader.h"
 
 @interface XBPCMPlayer ()
 @property (nonatomic,strong) NSData *dataStore;
 @property (nonatomic,strong) XBAudioUnitPlayer *player;
-@property (nonatomic,strong) XBAudioDataReader *reader;
+@property (nonatomic,strong) XBAudioPCMDataReader *reader;
 @end
 
 @implementation XBPCMPlayer
 
-- (instancetype)initWithPCMFilePath:(NSString *)filePath rate:(XBVoiceRate)rate channels:(XBVoiceChannel)channels bit:(XBVoiceBit)bit
+- (instancetype)initWithPCMFilePath:(NSString *)filePath rate:(XBAudioRate)rate channels:(XBAudioChannel)channels bit:(XBAudioBit)bit
 {
     if (self = [super init])
     {
         self.filePath = filePath;
         self.player = [[XBAudioUnitPlayer alloc] initWithRate:rate bit:bit channel:channels];
-        self.reader = [XBAudioDataReader new];
+        self.reader = [XBAudioPCMDataReader new];
     }
     return self;
 }

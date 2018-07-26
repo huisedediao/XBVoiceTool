@@ -32,7 +32,7 @@
 {
     if (self = [super init])
     {
-        [XBAudioTool getAudioPropertyWithFilepath:filePath completeBlock:^(AudioFileID audioFileIDT, AudioStreamBasicDescription audioFileFormatT, UInt64 packetNumsT, UInt64 maxFramesPerPacketT) {
+        [XBAudioTool getAudioPropertyWithFilepath:filePath completeBlock:^(AudioFileID audioFileIDT, AudioStreamBasicDescription audioFileFormatT, UInt64 packetNumsT, UInt64 maxFramesPerPacketT ,UInt64 fileLengthFrames) {
             
             audioConverter = NULL;
             

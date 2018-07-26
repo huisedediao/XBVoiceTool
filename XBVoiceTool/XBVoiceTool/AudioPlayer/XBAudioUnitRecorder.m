@@ -16,20 +16,22 @@
 {
     AudioUnit audioUnit;
 }
-@property (nonatomic,assign) XBVoiceBit bit;
-@property (nonatomic,assign) XBVoiceRate rate;
-@property (nonatomic,assign) XBVoiceChannel channel;
+@property (nonatomic,assign) XBAudioBit bit;
+@property (nonatomic,assign) XBAudioRate rate;
+@property (nonatomic,assign) XBAudioChannel channel;
 @end
 
 @implementation XBAudioUnitRecorder
 
-- (instancetype)initWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel
+- (instancetype)initWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
 {
     if (self = [super init])
     {
         self.bit = bit;
         self.rate = rate;
         self.channel = channel;
+        
+        [self initInputAudioUnitWithRate:self.rate bit:self.bit channel:self.channel];
     }
     return self;
 }
@@ -37,18 +39,22 @@
 {
     if (self = [super init])
     {
-        self.bit = XBVoiceBit_16;
-        self.rate = XBVoiceRate_44k;
-        self.channel = XBVoiceChannel_1;
+        self.bit = XBAudioBit_16;
+        self.rate = XBAudioRate_44k;
+        self.channel = XBAudioChannel_1;
+        
+        [self initInputAudioUnitWithRate:self.rate bit:self.bit channel:self.channel];
     }
     return self;
 }
 - (void)dealloc
 {
+    CheckError(AudioComponentInstanceDispose(audioUnit),
+               "AudioComponentInstanceDispose failed");
     NSLog(@"XBAudioUnitRecorder销毁");
 }
 
-- (void)initInputAudioUnitWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel
+- (void)initInputAudioUnitWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
 {
     //设置AVAudioSession
     NSError *error = nil;
@@ -59,7 +65,7 @@
     //初始化audioUnit
     AudioComponentDescription inputDesc = [XBAudioTool allocAudioComponentDescriptionWithComponentType:kAudioUnitType_Output componentSubType:kAudioUnitSubType_RemoteIO componentFlags:0 componentFlagsMask:0];
     AudioComponent inputComponent = AudioComponentFindNext(NULL, &inputDesc);
-    AudioComponentInstanceNew(inputComponent, &audioUnit);
+    CheckError(AudioComponentInstanceNew(inputComponent, &audioUnit), "AudioComponentInstanceNew failure");
     
 
     //设置输出流格式
@@ -73,7 +79,16 @@
                          kInputBus,
                          &inputStreamDesc,
                          sizeof(inputStreamDesc));
-    CheckError(status, "setProperty StreamFormat error");
+    CheckError(status, "setProperty inputStreamFormat error");
+    
+//    status = AudioUnitSetProperty(audioUnit,
+//                                           kAudioUnitProperty_StreamFormat,
+//                                           kAudioUnitScope_Input,
+//                                           kOutputBus,
+//                                           &inputStreamDesc,
+//                                           sizeof(inputStreamDesc));
+//    CheckError(status, "setProperty outputStreamFormat error");
+    
     
     //麦克风输入设置为1（yes）
     int inputEnable = 1;
@@ -97,21 +112,55 @@
                                   &inputCallBackStruce,
                                   sizeof(inputCallBackStruce));
     CheckError(status, "setProperty InputCallback error");
+    
+    AudioStreamBasicDescription outputDesc0;
+    UInt32 size = sizeof(outputDesc0);
+    CheckError(AudioUnitGetProperty(audioUnit,
+                                    kAudioUnitProperty_StreamFormat,
+                                    kAudioUnitScope_Output,
+                                    0,
+                                    &outputDesc0,
+                                    &size),"get property failure");
+    
+    AudioStreamBasicDescription outputDesc1;
+    size = sizeof(outputDesc1);
+    CheckError(AudioUnitGetProperty(audioUnit,
+                                    kAudioUnitProperty_StreamFormat,
+                                    kAudioUnitScope_Input,
+                                    0,
+                                    &outputDesc1,
+                                    &size),"get property failure");
 }
 
 - (void)start
 {
     [self delete];
-    [self initInputAudioUnitWithRate:self.rate bit:self.bit channel:self.channel];
     AudioOutputUnitStart(audioUnit);
+    _isRecording = YES;
 }
 
 - (void)stop
 {
     CheckError(AudioOutputUnitStop(audioUnit),
                "AudioOutputUnitStop failed");
-    CheckError(AudioComponentInstanceDispose(audioUnit),
-               "AudioComponentInstanceDispose failed");
+    
+    _isRecording = NO;
+}
+
+
+
+- (AudioStreamBasicDescription)getOutputFormat
+{
+    
+    AudioStreamBasicDescription outputDesc0;
+    UInt32 size = sizeof(outputDesc0);
+    CheckError(AudioUnitGetProperty(audioUnit,
+                                    kAudioUnitProperty_StreamFormat,
+                                    kAudioUnitScope_Output,
+                                    0,
+                                    &outputDesc0,
+                                    &size),"get property failure");
+    return outputDesc0;
 }
 
 static OSStatus inputCallBackFun(    void *                            inRefCon,
@@ -123,6 +172,8 @@ static OSStatus inputCallBackFun(    void *                            inRefCon,
 {
 
     XBAudioUnitRecorder *recorder = (__bridge XBAudioUnitRecorder *)(inRefCon);
+    typeof(recorder) __weak weakRecorder = recorder;
+    
     AudioBufferList bufferList;
     bufferList.mNumberBuffers = 1;
     bufferList.mBuffers[0].mData = NULL;
@@ -138,6 +189,10 @@ static OSStatus inputCallBackFun(    void *                            inRefCon,
     if (recorder.bl_output)
     {
         recorder.bl_output(&bufferList);
+    }
+    if (recorder.bl_outputFull)
+    {
+        recorder.bl_outputFull(weakRecorder, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, &bufferList);
     }
     
     return noErr;

@@ -13,7 +13,7 @@
 @implementation XBAudioFormatConversion
 
 ///PCM转MP3
-+ (NSString *)audio_PCMToMP3:(NSString *)pcmFilePath rate:(XBVoiceRate)rate
++ (NSString *)audio_PCMToMP3:(NSString *)pcmFilePath rate:(XBAudioRate)rate
 {
     NSString *mp3FilePath = [NSString stringWithFormat:@"%@XB_PCMToMP3.mp3",NSTemporaryDirectory()];
     
@@ -103,7 +103,7 @@
 
 
 ///PCM转WAV
-+ (NSString *)audio_PCMToWAV:(NSString *)pcmFilePath rate:(XBVoiceRate)rate channels:(int)channels
++ (NSString *)audio_PCMToWAV:(NSString *)pcmFilePath rate:(XBAudioRate)rate channels:(int)channels
 {
     NSString *wavPath = [NSString stringWithFormat:@"%@XB_PCMToWAV.wav",NSTemporaryDirectory()];
     char *pcmPath_c = (char *)[pcmFilePath UTF8String];

@@ -14,7 +14,7 @@
  PCM转MP3
  只能转双声道数据，单声道会变快
  */
-+ (NSString *)audio_PCMToMP3:(NSString *)pcmFilePath rate:(XBVoiceRate)rate;
++ (NSString *)audio_PCMToMP3:(NSString *)pcmFilePath rate:(XBAudioRate)rate;
 ///PCM转WAV
-+ (NSString *)audio_PCMToWAV:(NSString *)pcmFilePath rate:(XBVoiceRate)rate channels:(int)channels;
++ (NSString *)audio_PCMToWAV:(NSString *)pcmFilePath rate:(XBAudioRate)rate channels:(int)channels;
 @end

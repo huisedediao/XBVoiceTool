@@ -10,13 +10,22 @@
 #import "Header_audio.h"
 
 @interface XBAudioTool : NSObject
-/**
+/** 同步获取文件信息
  filePath：          文件路径
  audioFileFormat ：  文件格式描述
  packetNums ：       总的packet数量
  maxFramesPerPacket：单个packet的最大帧数
+ fileLengthFrames : 总帧数
+ */
++ (void)getAudioPropertyWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket,UInt64 fileLengthFrames))completeBlock errorBlock:(void (^)(NSError *error))errorBlock;
+/** 异步获取文件信息
+ filePath：          文件路径
+ audioFileFormat ：  文件格式描述
+ packetNums ：       总的packet数量
+ maxFramesPerPacket：单个packet的最大帧数
+ fileLengthFrames : 总帧数
 */
-+ (void)getAudioPropertyWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket))completeBlock errorBlock:(void (^)(NSError *error))errorBlock;
++ (void)getAudioPropertyAsyncWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket,UInt64 fileLengthFrames))completeBlock errorBlock:(void (^)(NSError *error))errorBlock;
 /**
  打印格式信息
  */
@@ -38,7 +47,7 @@
  mChannelsPerFrame ： 每frame多少channel
  mBitsPerChannel ： 采样精度
  */
-+ (AudioStreamBasicDescription)allocAudioStreamBasicDescriptionWithMFormatID:(AudioFormatID)mFormatID mFormatFlags:(AudioFormatFlags)mFormatFlags mSampleRate:(XBVoiceRate)mSampleRate  mFramesPerPacket:(UInt32)mFramesPerPacket mChannelsPerFrame:(UInt32)mChannelsPerFrame mBitsPerChannel:(UInt32)mBitsPerChannel;
++ (AudioStreamBasicDescription)allocAudioStreamBasicDescriptionWithMFormatID:(XBAudioFormatID)mFormatID mFormatFlags:(XBAudioFormatFlags)mFormatFlags mSampleRate:(XBAudioRate)mSampleRate  mFramesPerPacket:(UInt32)mFramesPerPacket mChannelsPerFrame:(UInt32)mChannelsPerFrame mBitsPerChannel:(UInt32)mBitsPerChannel;
 
 /**
  componentType : kAudioUnitType_

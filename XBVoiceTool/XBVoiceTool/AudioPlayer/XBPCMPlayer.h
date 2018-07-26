@@ -19,7 +19,7 @@
 @property (nonatomic,copy) NSString *filePath;
 @property (nonatomic,assign) BOOL isPlaying;
 @property (nonatomic,weak) id<XBPCMPlayerDelegate>delegate;
-- (instancetype)initWithPCMFilePath:(NSString *)filePath rate:(XBVoiceRate)rate channels:(XBVoiceChannel)channels bit:(XBVoiceBit)bit;
+- (instancetype)initWithPCMFilePath:(NSString *)filePath rate:(XBAudioRate)rate channels:(XBAudioChannel)channels bit:(XBAudioBit)bit;
 - (void)play;
 - (void)stop;
 @end

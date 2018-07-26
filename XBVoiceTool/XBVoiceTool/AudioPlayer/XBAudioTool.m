@@ -9,13 +9,14 @@
 #import "XBAudioTool.h"
 
 @implementation XBAudioTool
-/**
+/** 同步获取文件信息
  filePath：          文件路径
  audioFileFormat ：  文件格式描述
  packetNums ：       总的packet数量
  maxFramesPerPacket：单个packet的最大帧数
+ fileLengthFrames : 总帧数
  */
-+ (void)getAudioPropertyWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket))completeBlock errorBlock:(void (^)(NSError *error))errorBlock
++ (void)getAudioPropertyWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket,UInt64 fileLengthFrames))completeBlock errorBlock:(void (^)(NSError *error))errorBlock
 {
     AudioFileID audioFileID;
     AudioStreamBasicDescription audioFileFormat = {};
@@ -39,7 +40,7 @@
     
     //读取文件格式
     uint32_t size = sizeof(AudioStreamBasicDescription);
-    status = AudioFileGetProperty(audioFileID, kAudioFilePropertyDataFormat, &size, &audioFileFormat); 
+    status = AudioFileGetProperty(audioFileID, kAudioFilePropertyDataFormat, &size, &audioFileFormat);
     if (status != noErr)
     {
         error = [NSError errorWithDomain:[NSString stringWithFormat:@"读取文件格式出错，error status %zd", status] code:1008602 userInfo:nil];
@@ -91,11 +92,42 @@
         }
     }
     
+    // 总帧数
+    UInt64 numFrames = maxFramesPerPacket * packetNums;
+    
+    AudioFileClose(audioFileID);
     
     if (completeBlock)
     {
-        completeBlock(audioFileID,audioFileFormat,packetNums,maxFramesPerPacket);
+        completeBlock(audioFileID,audioFileFormat,packetNums,maxFramesPerPacket,numFrames);
     }
+}
+/** 异步获取文件信息
+ filePath：          文件路径
+ audioFileFormat ：  文件格式描述
+ packetNums ：       总的packet数量
+ maxFramesPerPacket：单个packet的最大帧数
+ fileLengthFrames : 总帧数
+ */
++ (void)getAudioPropertyAsyncWithFilepath:(NSString *)filePath completeBlock:(void (^)(AudioFileID audioFileID,AudioStreamBasicDescription audioFileFormat,UInt64 packetNums,UInt64 maxFramesPerPacket,UInt64 fileLengthFrames))completeBlock errorBlock:(void (^)(NSError *error))errorBlock
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [XBAudioTool getAudioPropertyWithFilepath:filePath completeBlock:^(AudioFileID audioFileID, AudioStreamBasicDescription audioFileFormat, UInt64 packetNums, UInt64 maxFramesPerPacket, UInt64 fileLengthFrames) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completeBlock)
+                {
+                    completeBlock(audioFileID,audioFileFormat,packetNums,maxFramesPerPacket,fileLengthFrames);
+                }
+            });
+        } errorBlock:^(NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (errorBlock)
+                {
+                    errorBlock(error);
+                }
+            });
+        }];
+    });
 }
 
 + (void)printAudioStreamBasicDescription:(AudioStreamBasicDescription)asbd
@@ -140,7 +172,7 @@
  mChannelsPerFrame ： 每frame多少channel
  mBitsPerChannel ： 采样精度
  */
-+ (AudioStreamBasicDescription)allocAudioStreamBasicDescriptionWithMFormatID:(AudioFormatID)mFormatID mFormatFlags:(AudioFormatFlags)mFormatFlags mSampleRate:(XBVoiceRate)mSampleRate  mFramesPerPacket:(UInt32)mFramesPerPacket mChannelsPerFrame:(UInt32)mChannelsPerFrame mBitsPerChannel:(UInt32)mBitsPerChannel
++ (AudioStreamBasicDescription)allocAudioStreamBasicDescriptionWithMFormatID:(XBAudioFormatID)mFormatID mFormatFlags:(XBAudioFormatFlags)mFormatFlags mSampleRate:(XBAudioRate)mSampleRate  mFramesPerPacket:(UInt32)mFramesPerPacket mChannelsPerFrame:(UInt32)mChannelsPerFrame mBitsPerChannel:(UInt32)mBitsPerChannel
 {
     AudioStreamBasicDescription _outputFormat;
     memset(&_outputFormat, 0, sizeof(_outputFormat));

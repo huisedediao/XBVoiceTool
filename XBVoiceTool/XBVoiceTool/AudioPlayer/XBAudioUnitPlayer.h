@@ -22,7 +22,7 @@ typedef void (^XBAudioUnitPlayerInputBlockFull)(XBAudioUnitPlayer *player,
 @interface XBAudioUnitPlayer : NSObject
 @property (nonatomic,copy) XBAudioUnitPlayerInputBlock bl_input;
 @property (nonatomic,copy) XBAudioUnitPlayerInputBlockFull bl_inputFull;
-- (instancetype)initWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel;
+- (instancetype)initWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel;
 - (void)start;
 - (void)stop;
 @end

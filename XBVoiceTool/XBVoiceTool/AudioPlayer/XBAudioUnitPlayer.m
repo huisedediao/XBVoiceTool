@@ -13,14 +13,14 @@
 {
     AudioUnit audioUnit;
 }
-@property (nonatomic,assign) XBVoiceBit bit;
-@property (nonatomic,assign) XBVoiceRate rate;
-@property (nonatomic,assign) XBVoiceChannel channel;
+@property (nonatomic,assign) XBAudioBit bit;
+@property (nonatomic,assign) XBAudioRate rate;
+@property (nonatomic,assign) XBAudioChannel channel;
 @end
 
 @implementation XBAudioUnitPlayer
 
-- (instancetype)initWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel
+- (instancetype)initWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
 {
     if (self = [super init])
     {
@@ -35,9 +35,9 @@
 {
     if (self = [super init])
     {
-        self.rate = XBVoiceRate_44k;
-        self.bit = XBVoiceBit_16;
-        self.channel = XBVoiceChannel_1;
+        self.rate = XBAudioRate_44k;
+        self.bit = XBAudioBit_16;
+        self.channel = XBAudioChannel_1;
     }
     return self;
 }
@@ -47,7 +47,7 @@
     NSLog(@"XBAudioUnitPlayer销毁");
 }
 
-- (void)initAudioUnitWithRate:(XBVoiceRate)rate bit:(XBVoiceBit)bit channel:(XBVoiceChannel)channel
+- (void)initAudioUnitWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
 {
     //设置session
     NSError *error = nil;
@@ -115,13 +115,14 @@ static OSStatus outputCallBackFun(    void *                            inRefCon
 //    memset(ioData->mBuffers[1].mData, 0, ioData->mBuffers[1].mDataByteSize);
     
     XBAudioUnitPlayer *player = (__bridge XBAudioUnitPlayer *)(inRefCon);
+    typeof(player) __weak weakPlayer = player;
     if (player.bl_input)
     {
         player.bl_input(ioData);
     }
     if (player.bl_inputFull)
     {
-        player.bl_inputFull(player, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, ioData);
+        player.bl_inputFull(weakPlayer, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, ioData);
     }
     return noErr;
 }

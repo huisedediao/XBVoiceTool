@@ -31,7 +31,7 @@
         
         _bufferList = [XBAudioTool allocAudioBufferListWithMDataByteSize:CONST_BUFFER_SIZE mNumberChannels:1 mNumberBuffers:1];
         
-        _outputFormat = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:kLinearPCMFormatFlagIsSignedInteger mSampleRate:XBVoiceRate_44k mFramesPerPacket:1 mChannelsPerFrame:2 mBitsPerChannel:16];
+        _outputFormat = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:kLinearPCMFormatFlagIsSignedInteger mSampleRate:XBAudioRate_44k mFramesPerPacket:1 mChannelsPerFrame:2 mBitsPerChannel:16];
         
         uint size = sizeof(_outputFormat);
         CheckError(ExtAudioFileSetProperty(_audioFile, kExtAudioFileProperty_ClientDataFormat, size, &_outputFormat), "setkExtAudioFileProperty_ClientDataFormat failure");
