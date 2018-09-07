@@ -97,6 +97,10 @@
 
 - (void)stop
 {
+    if (audioUnit == nil)
+    {
+        return;
+    }
     OSStatus status;
     status = AudioOutputUnitStop(audioUnit);
     CheckError(status, "audioUnit停止失败");

@@ -55,7 +55,7 @@
     
 //    [self writeTest];
     
-    [self mixMusic];
+//    [self mixMusic];
     
 //    [self playMP3New];
     
@@ -67,7 +67,7 @@
     
 //    [self record];
     
-//    [self play];
+    [self play];
 }
 
 #pragma mark - mixTest
@@ -175,13 +175,14 @@
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMixMusicTest" ofType:@"caf"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"pcm"];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"recordTest" ofType:@"caf"];
-    NSString *path = stroePath;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMediaNew" ofType:@"caf"];
+//    NSString *path = stroePath;
     
-    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
+    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_16k channels:2 bit:16];
     
     self.palyer.delegate = self;
     [self.palyer play];
+    NSLog(@"start Play");
 }
 - (void)delete
 {

@@ -19,6 +19,9 @@
 		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
 		F161207620F48DBD005A3A0F /* XBAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F161207520F48DBD005A3A0F /* XBAudioPlayer.m */; };
 		F161207C20F4BA37005A3A0F /* 几个你_薛之谦.aac in Resources */ = {isa = PBXBuildFile; fileRef = F161207B20F4BA37005A3A0F /* 几个你_薛之谦.aac */; };
+		F161C7E321411DC300DE07C4 /* xbMedia.caf in Resources */ = {isa = PBXBuildFile; fileRef = F161C7E221411DC300DE07C4 /* xbMedia.caf */; };
+		F161C7E6214121D200DE07C4 /* xbMediaOld.caf in Resources */ = {isa = PBXBuildFile; fileRef = F161C7E4214121D000DE07C4 /* xbMediaOld.caf */; };
+		F161C7E7214121D200DE07C4 /* xbMediaNew.caf in Resources */ = {isa = PBXBuildFile; fileRef = F161C7E5214121D200DE07C4 /* xbMediaNew.caf */; };
 		F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA620E5C0B100F901FA /* xbMedia.pcm */; };
 		F162EEA920E5C26900F901FA /* output.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA820E5C23700F901FA /* output.pcm */; };
 		F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */; };
@@ -81,6 +84,9 @@
 		F161207420F48DBD005A3A0F /* XBAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioPlayer.h; sourceTree = "<group>"; };
 		F161207520F48DBD005A3A0F /* XBAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioPlayer.m; sourceTree = "<group>"; };
 		F161207B20F4BA37005A3A0F /* 几个你_薛之谦.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = "几个你_薛之谦.aac"; sourceTree = "<group>"; };
+		F161C7E221411DC300DE07C4 /* xbMedia.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia.caf; sourceTree = "<group>"; };
+		F161C7E4214121D000DE07C4 /* xbMediaOld.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMediaOld.caf; sourceTree = "<group>"; };
+		F161C7E5214121D200DE07C4 /* xbMediaNew.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMediaNew.caf; sourceTree = "<group>"; };
 		F162EEA620E5C0B100F901FA /* xbMedia.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia.pcm; sourceTree = "<group>"; };
 		F162EEA820E5C23700F901FA /* output.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.pcm; sourceTree = "<group>"; };
 		F16932E820E4876800226DB1 /* XBAudioUnitRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitRecorder.h; sourceTree = "<group>"; };
@@ -199,6 +205,9 @@
 		F13DD77420DB884E00D1519D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F161C7E5214121D200DE07C4 /* xbMediaNew.caf */,
+				F161C7E4214121D000DE07C4 /* xbMediaOld.caf */,
+				F161C7E221411DC300DE07C4 /* xbMedia.caf */,
 				F1F83D3121096CA50005C272 /* recordTest.caf */,
 				F1F83D2F21096BD10005C272 /* xbMixData.caf */,
 				F1F83D2D210861F40005C272 /* xbMixMusicTest.caf */,
@@ -387,12 +396,15 @@
 				F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */,
 				F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */,
 				F1F83D2E210861F40005C272 /* xbMixMusicTest.caf in Resources */,
+				F161C7E321411DC300DE07C4 /* xbMedia.caf in Resources */,
+				F161C7E7214121D200DE07C4 /* xbMediaNew.caf in Resources */,
 				F130CABE21072AF1000213FA /* xbMixMusic.pcm in Resources */,
 				F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */,
 				F162EEA920E5C26900F901FA /* output.pcm in Resources */,
 				F1F83D3021096BD10005C272 /* xbMixData.caf in Resources */,
 				F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */,
 				F130CAB22107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 in Resources */,
+				F161C7E6214121D200DE07C4 /* xbMediaOld.caf in Resources */,
 				F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */,
 				F161207C20F4BA37005A3A0F /* 几个你_薛之谦.aac in Resources */,
 				F162EEA720E5C0B100F901FA /* xbMedia.pcm in Resources */,

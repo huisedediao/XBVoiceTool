@@ -32,6 +32,7 @@
 
 typedef enum : NSUInteger {
     XBAudioRate_8k = 8000,
+    XBAudioRate_16k = 16000,
     XBAudioRate_20k = 20000,
     XBAudioRate_44k = 44100,
     XBAudioRate_96k = 96000
