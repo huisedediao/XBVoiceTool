@@ -33,6 +33,7 @@
 		F16F7C7720DA6D62005686CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C7620DA6D62005686CD /* main.m */; };
 		F16F7C8120DA6D62005686CD /* XBVoiceToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C8020DA6D62005686CD /* XBVoiceToolTests.m */; };
 		F16F7C8C20DA6D62005686CD /* XBVoiceToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C8B20DA6D62005686CD /* XBVoiceToolUITests.m */; };
+		F17343EA2146586E00B7F5A8 /* XBAudioDataBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = F17343E82146586D00B7F5A8 /* XBAudioDataBuffer.m */; };
 		F1C70D3E20E6251000C1DFC5 /* record.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F1C70D3D20E6251000C1DFC5 /* record.pcm */; };
 		F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */; };
 		F1C70D4420E9B29B00C1DFC5 /* XBPCMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C70D4320E9B29B00C1DFC5 /* XBPCMPlayer.m */; };
@@ -107,6 +108,8 @@
 		F16F7C8720DA6D62005686CD /* XBVoiceToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XBVoiceToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16F7C8B20DA6D62005686CD /* XBVoiceToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVoiceToolUITests.m; sourceTree = "<group>"; };
 		F16F7C8D20DA6D62005686CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17343E82146586D00B7F5A8 /* XBAudioDataBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBAudioDataBuffer.m; sourceTree = "<group>"; };
+		F17343E92146586E00B7F5A8 /* XBAudioDataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBAudioDataBuffer.h; sourceTree = "<group>"; };
 		F1C70D3D20E6251000C1DFC5 /* record.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = record.pcm; sourceTree = "<group>"; };
 		F1C70D3F20E62FA100C1DFC5 /* XBAudioUnitPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAudioUnitPlayer.h; sourceTree = "<group>"; };
 		F1C70D4020E62FA100C1DFC5 /* XBAudioUnitPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioUnitPlayer.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 		F13DD76F20DB880000D1519D /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F17343E92146586E00B7F5A8 /* XBAudioDataBuffer.h */,
+				F17343E82146586D00B7F5A8 /* XBAudioDataBuffer.m */,
 				F11FEF4620E382DC004691F8 /* Header_audio.h */,
 				F11FEF3E20E37C8A004691F8 /* XBAudioFormatConversion.h */,
 				F11FEF3F20E37C8A004691F8 /* XBAudioFormatConversion.m */,
@@ -443,6 +448,7 @@
 				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m in Sources */,
 				F1E0FFFA20FF33450021EC7D /* XBAudioUnitMixer.m in Sources */,
 				F16F7C7720DA6D62005686CD /* main.m in Sources */,
+				F17343EA2146586E00B7F5A8 /* XBAudioDataBuffer.m in Sources */,
 				F1F83D2C21085F050005C272 /* ExtAudioFileMixer.m in Sources */,
 				F1F83D29210751920005C272 /* XBExtAudioFileRef.m in Sources */,
 				F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */,
