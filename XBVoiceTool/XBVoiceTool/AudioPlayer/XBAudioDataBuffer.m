@@ -11,7 +11,7 @@
 @interface XBAudioDataBuffer ()
 {
     NSLock *_lock;//锁
-    void *_dataBuffer;//缓冲池
+    char *_dataBuffer;//缓冲池
     int _availableLen;//可用数据的长度
     int _buf_size;//记录XBAudioDataBuffer的最大长度
     int _w_pos;//写入数据的偏移地址
@@ -23,31 +23,15 @@
 
 /**
  bufferSize : 缓冲池最大长度
- bit : 采样深度
  */
-- (instancetype)initWithBufferSize:(int)bufferSize bit:(int)bit
+- (instancetype)initWithBufferSize:(int)bufferSize
 {
     if (self = [super init])
     {
         _lock = [NSLock new];
         _buf_size = bufferSize;
         
-        if (bit == 16)
-        {
-            _dataBuffer = (short *)malloc(bufferSize * sizeof(Float32));
-        }
-        else if (bit == 32)
-        {
-            _dataBuffer = (int *)malloc(bufferSize * sizeof(Float32));
-        }
-        else if (bit == 64)
-        {
-            _dataBuffer = (long *)malloc(bufferSize * sizeof(Float32));
-        }
-        else
-        {
-            _dataBuffer = (char *)malloc(bufferSize * sizeof(Float32));
-        }
+        _dataBuffer = (char *)malloc(bufferSize * sizeof(Float32));
     }
     return self;
 }

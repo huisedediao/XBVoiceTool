@@ -12,9 +12,8 @@
 
 /**
  bufferSize : 缓冲池最大长度
- bit : 采样深度
  */
-- (instancetype)initWithBufferSize:(int)bufferSize bit:(int)bit;
+- (instancetype)initWithBufferSize:(int)bufferSize;
 
 /** 写入数据
  data : 要写入到缓冲池的数据
