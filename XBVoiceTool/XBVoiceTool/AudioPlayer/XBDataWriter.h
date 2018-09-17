@@ -10,7 +10,7 @@
 #import "Header_audio.h"
 
 @interface XBDataWriter : NSObject
-- (void)writeBytes:(Byte *)bytes len:(NSUInteger)len toPath:(NSString *)path;
+- (void)writeBytes:(void *)bytes len:(NSUInteger)len toPath:(NSString *)path;
 - (void)writeData:(NSData *)data toPath:(NSString *)path;
 
 @end

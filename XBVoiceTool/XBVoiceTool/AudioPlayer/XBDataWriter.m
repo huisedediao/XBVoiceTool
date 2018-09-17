@@ -10,7 +10,7 @@
 
 @implementation XBDataWriter
 
-- (void)writeBytes:(Byte *)bytes len:(NSUInteger)len toPath:(NSString *)path
+- (void)writeBytes:(void *)bytes len:(NSUInteger)len toPath:(NSString *)path
 {
     static FILE *fp=NULL;
     
