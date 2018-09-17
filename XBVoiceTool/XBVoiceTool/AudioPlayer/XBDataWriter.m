@@ -8,10 +8,22 @@
 
 #import "XBDataWriter.h"
 
+@interface XBDataWriter ()
+@property (nonatomic,strong) NSLock *lock;
+@end
+
 @implementation XBDataWriter
+
 
 - (void)writeBytes:(void *)bytes len:(NSUInteger)len toPath:(NSString *)path
 {
+    [self.lock lock];
+    //    NSString *savePath = path;
+    //    if ([[NSFileManager defaultManager] fileExistsAtPath:savePath] == false)
+    //    {
+    //        [[NSFileManager defaultManager] createFileAtPath:savePath contents:nil attributes:nil];
+    //    }
+    
     static FILE *fp=NULL;
     
     if(fp==NULL || access( [path UTF8String], F_OK )==-1){
@@ -37,10 +49,13 @@
         printf("write to file %zd bytes",bytes);
         
     }
+    [self.lock unlock];
 }
 
 - (void)writeData:(NSData *)data toPath:(NSString *)path
 {
+    [self.lock lock];
+    
     NSString *savePath = path;
     if ([[NSFileManager defaultManager] fileExistsAtPath:savePath] == false)
     {
@@ -49,7 +64,17 @@
     NSFileHandle * handle = [NSFileHandle fileHandleForWritingAtPath:savePath];
     [handle seekToEndOfFile];
     [handle writeData:data];
+    
+    [self.lock unlock];
 }
 
-
+- (NSLock *)lock
+{
+    if (_lock == nil)
+    {
+        _lock = [NSLock new];
+    }
+    return _lock;
+}
 @end
+
