@@ -48,6 +48,10 @@
             if (readLen == 0)
             {
                 [weakSelf stop];
+                if ([weakSelf.delegate respondsToSelector:@selector(playToEnd:)])
+                {
+                    [weakSelf.delegate playToEnd:weakSelf];
+                }
             }
         };
     }
