@@ -23,7 +23,8 @@
 
 //#define stroePath [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"recordTest.caf"]
 
-#define subPathPCM @"/Documents/xbMedia.caf"
+#define subPathPCM @"/Documents/xbMixData.caf"
+//#define subPathPCM @"/Documents/xbMedia.caf"
 #define stroePath [NSHomeDirectory() stringByAppendingString:subPathPCM]
 
 @interface ViewController () <XBPCMPlayerDelegate>
@@ -175,10 +176,10 @@
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMixMusicTest" ofType:@"caf"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"pcm"];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMediaNew" ofType:@"caf"];
-//    NSString *path = stroePath;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMediaNew" ofType:@"caf"];
+    NSString *path = stroePath;
     
-    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_16k channels:2 bit:16];
+    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
     
     self.palyer.delegate = self;
     [self.palyer play];

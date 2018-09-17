@@ -78,9 +78,18 @@
         };
     }
 }
+- (void)delete
+{
+    NSString *pcmPath = stroePath;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pcmPath])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:pcmPath error:nil];
+    }
+}
 
 - (void)start
 {
+    [self delete];
     [self.recorder start];
     [self.player start];
 }
