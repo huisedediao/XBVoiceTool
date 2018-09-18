@@ -624,6 +624,7 @@
 				DEVELOPMENT_TEAM = RC2BP8QGY9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XBVoiceTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,6 +644,7 @@
 				DEVELOPMENT_TEAM = RC2BP8QGY9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XBVoiceTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

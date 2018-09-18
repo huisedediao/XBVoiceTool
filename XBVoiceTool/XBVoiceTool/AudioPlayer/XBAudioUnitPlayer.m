@@ -45,6 +45,9 @@
 - (void)dealloc
 {
     NSLog(@"XBAudioUnitPlayer销毁");
+    OSStatus status;
+    status = AudioComponentInstanceDispose(audioUnit);
+    CheckError(status, "audioUnit释放失败");
 }
 
 - (void)initAudioUnitWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
@@ -60,7 +63,7 @@
     AudioComponent outputComponent = AudioComponentFindNext(NULL, &outputDesc);
     AudioComponentInstanceNew(outputComponent, &audioUnit);
     
-
+    
     
     //设置输出格式
     int mFramesPerPacket = 1;
@@ -91,7 +94,10 @@
 
 - (void)start
 {
-    [self initAudioUnitWithRate:self.rate bit:self.bit channel:self.channel];
+    if (audioUnit == nil)
+    {
+        [self initAudioUnitWithRate:self.rate bit:self.bit channel:self.channel];
+    }
     AudioOutputUnitStart(audioUnit);
 }
 
@@ -104,19 +110,16 @@
     OSStatus status;
     status = AudioOutputUnitStop(audioUnit);
     CheckError(status, "audioUnit停止失败");
-
-    status = AudioComponentInstanceDispose(audioUnit);
-    CheckError(status, "audioUnit释放失败");
 }
 static OSStatus outputCallBackFun(    void *                            inRefCon,
-                    AudioUnitRenderActionFlags *    ioActionFlags,
-                    const AudioTimeStamp *            inTimeStamp,
-                    UInt32                            inBusNumber,
-                    UInt32                            inNumberFrames,
-                    AudioBufferList * __nullable    ioData)
+                                  AudioUnitRenderActionFlags *    ioActionFlags,
+                                  const AudioTimeStamp *            inTimeStamp,
+                                  UInt32                            inBusNumber,
+                                  UInt32                            inNumberFrames,
+                                  AudioBufferList * __nullable    ioData)
 {
     memset(ioData->mBuffers[0].mData, 0, ioData->mBuffers[0].mDataByteSize);
-//    memset(ioData->mBuffers[1].mData, 0, ioData->mBuffers[1].mDataByteSize);
+    //    memset(ioData->mBuffers[1].mData, 0, ioData->mBuffers[1].mDataByteSize);
     
     XBAudioUnitPlayer *player = (__bridge XBAudioUnitPlayer *)(inRefCon);
     typeof(player) __weak weakPlayer = player;
@@ -132,3 +135,4 @@ static OSStatus outputCallBackFun(    void *                            inRefCon
 }
 
 @end
+

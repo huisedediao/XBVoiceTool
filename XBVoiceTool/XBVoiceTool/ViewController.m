@@ -173,11 +173,11 @@
 #pragma mark - 播放
 - (void)play
 {
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMixMusicTest" ofType:@"caf"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMediaNew" ofType:@"caf"];
-    NSString *path = stroePath;
+//    NSString *path = stroePath;
     
     self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
     

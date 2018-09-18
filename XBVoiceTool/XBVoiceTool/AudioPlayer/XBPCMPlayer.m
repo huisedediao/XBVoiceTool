@@ -40,7 +40,7 @@
     {
         typeof(self) __weak weakSelf = self;
         self.player.bl_input = ^(AudioBufferList *bufferList) {
-
+//            NSLog(@"xxxxxinputCallBackTime:%f",[[NSDate date] timeIntervalSince1970]);
             AudioBuffer buffer = bufferList->mBuffers[0];
             int len = buffer.mDataByteSize;
             int readLen = [weakSelf.reader readDataFrom:weakSelf.dataStore len:len forData:buffer.mData];
