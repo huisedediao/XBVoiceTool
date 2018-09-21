@@ -45,9 +45,12 @@
 - (void)dealloc
 {
     NSLog(@"XBAudioUnitPlayer销毁");
-    OSStatus status;
-    status = AudioComponentInstanceDispose(audioUnit);
-    CheckError(status, "audioUnit释放失败");
+    if (audioUnit)
+    {
+        OSStatus status;
+        status = AudioComponentInstanceDispose(audioUnit);
+        CheckError(status, "audioUnit释放失败");
+    }
 }
 
 - (void)initAudioUnitWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel
