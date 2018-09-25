@@ -31,7 +31,7 @@
         _lock = [NSLock new];
         _buf_size = bufferSize;
         
-        _dataBuffer = (char *)malloc(bufferSize * sizeof(Float32));
+        _dataBuffer = (char *)malloc(bufferSize * sizeof(char));
     }
     return self;
 }
