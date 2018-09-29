@@ -17,8 +17,6 @@
 
 - (void)writeBytes:(void *)bytes len:(NSUInteger)len toPath:(NSString *)path
 {
-    [self.lock lock];
-    
     NSData *data = [NSData dataWithBytes:bytes length:len];
     [self writeData:data toPath:path];
     
@@ -53,7 +51,6 @@
 //        printf("write to file %zd bytes",bytes);
 //        
 //    }
-    [self.lock unlock];
 }
 
 - (void)writeData:(NSData *)data toPath:(NSString *)path
