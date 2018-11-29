@@ -45,9 +45,15 @@
     
     unsigned char mp3Buffer[mp3DataSize];
 
-    ///这里的len / 2，是因为我们录音数据是char *类型的，一个char占一个字节。而这里要传的数据是short *类型的，一个short占2个字节
-    //不除2会有杂音
+    /**
+     这里的len / 2，是因为我们录音数据是char *类型的，一个char占一个字节。而这里要传的数据是short *类型的，一个short占2个字节
+     
+     lame_encode_buffer             //录音数据单声道16位整形用这个方法
+     lame_encode_buffer_interleaved //录音数据双声道交错用这个方法
+     lame_encode_buffer_float       //录音数据采样深度32位浮点型用这个方法
+     */
     int encodedBytes = lame_encode_buffer(lameClient, pcmData, pcmData, len / 2, mp3Buffer, mp3DataSize);
+    
     
     if (completeBlock)
     {
