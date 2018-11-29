@@ -24,8 +24,8 @@
         lame_set_in_samplerate(lameClient, sampleRate);
 //        lame_set_out_samplerate(lameClient, sampleRate);
 //        lame_set_mode(lameClient, 1);
-        lame_set_num_channels(lameClient, 1);
-        lame_set_brate(lameClient, 128);
+        lame_set_num_channels(lameClient, channels);
+        lame_set_brate(lameClient, bitRate);
 //        lame_set_quality(lameClient, 2);
         lame_init_params(lameClient);
     }

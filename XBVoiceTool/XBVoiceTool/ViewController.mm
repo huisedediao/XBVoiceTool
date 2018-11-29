@@ -89,7 +89,7 @@
     
     self.recorder = [[XBAudioUnitRecorder alloc] initWithRate:XBAudioRate_44k bit:XBAudioBit_16 channel:XBAudioChannel_1];
     
-    _mp3Encoder = [[MP3Encoder alloc] initWithSampleRate:XBAudioRate_44k channels:XBAudioChannel_1 bitRate:16];
+    _mp3Encoder = [[MP3Encoder alloc] initWithSampleRate:XBAudioRate_44k channels:1 bitRate:128];
     
     self.dataWriter = [[XBDataWriter alloc] init];
     
