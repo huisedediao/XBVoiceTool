@@ -16,6 +16,7 @@
 		F130CABE21072AF1000213FA /* xbMixMusic.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F130CABD21072AF1000213FA /* xbMixMusic.pcm */; };
 		F13105B2215F2AAD005FA93A /* testDecode.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13105B1215F2AAD005FA93A /* testDecode.pcm */; };
 		F135C12F21AF77B000C81558 /* XBAACEncoder_system.m in Sources */ = {isa = PBXBuildFile; fileRef = F135C12E21AF77B000C81558 /* XBAACEncoder_system.m */; };
+		F135C13621AFB0B600C81558 /* MP3Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F135C13521AFB0B600C81558 /* MP3Encoder.m */; };
 		F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */; };
 		F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */; };
 		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
@@ -28,7 +29,7 @@
 		F162EEA920E5C26900F901FA /* output.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F162EEA820E5C23700F901FA /* output.pcm */; };
 		F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = F16932E920E4876800226DB1 /* XBAudioUnitRecorder.m */; };
 		F16F7C6920DA6D62005686CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C6820DA6D62005686CD /* AppDelegate.m */; };
-		F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C6B20DA6D62005686CD /* ViewController.m */; };
+		F16F7C6C20DA6D62005686CD /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F16F7C6B20DA6D62005686CD /* ViewController.mm */; };
 		F16F7C6F20DA6D62005686CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C6D20DA6D62005686CD /* Main.storyboard */; };
 		F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C7020DA6D62005686CD /* Assets.xcassets */; };
 		F16F7C7420DA6D62005686CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */; };
@@ -85,6 +86,8 @@
 		F13105B1215F2AAD005FA93A /* testDecode.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDecode.pcm; sourceTree = "<group>"; };
 		F135C12D21AF77B000C81558 /* XBAACEncoder_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAACEncoder_system.h; sourceTree = "<group>"; };
 		F135C12E21AF77B000C81558 /* XBAACEncoder_system.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAACEncoder_system.m; sourceTree = "<group>"; };
+		F135C13421AFB0B600C81558 /* MP3Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP3Encoder.h; sourceTree = "<group>"; };
+		F135C13521AFB0B600C81558 /* MP3Encoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MP3Encoder.m; sourceTree = "<group>"; };
 		F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "周杰伦 - 晴天.mp3"; sourceTree = "<group>"; };
 		F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia1.pcm; sourceTree = "<group>"; };
 		F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia2.pcm; sourceTree = "<group>"; };
@@ -102,7 +105,7 @@
 		F16F7C6720DA6D62005686CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F16F7C6820DA6D62005686CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F16F7C6A20DA6D62005686CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F16F7C6B20DA6D62005686CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F16F7C6B20DA6D62005686CD /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		F16F7C6E20DA6D62005686CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F16F7C7020DA6D62005686CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F16F7C7320DA6D62005686CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -178,9 +181,19 @@
 			path = lame;
 			sourceTree = "<group>";
 		};
+		F135C13021AF8E4500C81558 /* Mp3Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				F135C13421AFB0B600C81558 /* MP3Encoder.h */,
+				F135C13521AFB0B600C81558 /* MP3Encoder.m */,
+			);
+			path = Mp3Encoder;
+			sourceTree = "<group>";
+		};
 		F13DD76F20DB880000D1519D /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F135C13021AF8E4500C81558 /* Mp3Encoder */,
 				F17343E92146586E00B7F5A8 /* XBAudioDataBuffer.h */,
 				F17343E82146586D00B7F5A8 /* XBAudioDataBuffer.m */,
 				F11FEF4620E382DC004691F8 /* Header_audio.h */,
@@ -271,7 +284,7 @@
 				F16F7C6720DA6D62005686CD /* AppDelegate.h */,
 				F16F7C6820DA6D62005686CD /* AppDelegate.m */,
 				F16F7C6A20DA6D62005686CD /* ViewController.h */,
-				F16F7C6B20DA6D62005686CD /* ViewController.m */,
+				F16F7C6B20DA6D62005686CD /* ViewController.mm */,
 				F16F7C6D20DA6D62005686CD /* Main.storyboard */,
 				F16F7C7020DA6D62005686CD /* Assets.xcassets */,
 				F16F7C7220DA6D62005686CD /* LaunchScreen.storyboard */,
@@ -455,7 +468,7 @@
 			files = (
 				F16932EA20E4876800226DB1 /* XBAudioUnitRecorder.m in Sources */,
 				F161207620F48DBD005A3A0F /* XBAudioPlayer.m in Sources */,
-				F16F7C6C20DA6D62005686CD /* ViewController.m in Sources */,
+				F16F7C6C20DA6D62005686CD /* ViewController.mm in Sources */,
 				F1F055C620EE043F0073CE8D /* XBAudioTool.m in Sources */,
 				F1F055C920EE1BFA0073CE8D /* XBAudioConverterPlayer.m in Sources */,
 				F1C70D4720E9C4E200C1DFC5 /* XBAudioUnitMixerTest.m in Sources */,
@@ -470,6 +483,7 @@
 				F11FEF4020E37C8A004691F8 /* XBAudioFormatConversion.m in Sources */,
 				F1F055C020EDC47F0073CE8D /* XBDataWriter.m in Sources */,
 				F1C70D4A20E9CB9400C1DFC5 /* XBAudioPCMDataReader.m in Sources */,
+				F135C13621AFB0B600C81558 /* MP3Encoder.m in Sources */,
 				F1C70D4120E62FA100C1DFC5 /* XBAudioUnitPlayer.m in Sources */,
 				F130CAAE2105D44C000213FA /* XBAudioFileDataReader.m in Sources */,
 			);

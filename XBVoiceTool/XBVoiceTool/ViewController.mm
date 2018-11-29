@@ -21,6 +21,7 @@
 #import "ExtAudioFileMixer.h"
 #import "XBDataWriter.h"
 #import "XBAACEncoder_system.h"
+#import "MP3Encoder.h"
 
 //#define stroePath [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"recordTest.caf"]
 
@@ -29,6 +30,7 @@
 #define stroePath [NSHomeDirectory() stringByAppendingString:subPathPCM]
 
 #define aacStroePath [NSHomeDirectory() stringByAppendingString:@"/Documents/testAAC.aac"]
+#define mp3StroePath [NSHomeDirectory() stringByAppendingString:@"/Documents/testMP3.mp3"]
 
 @interface ViewController () <XBPCMPlayerDelegate>
 @property (nonatomic,strong) XBPCMPlayer *palyer;
@@ -41,6 +43,7 @@
 @property (nonatomic,strong) XBExtAudioFileRef *xbFile;
 @property (nonatomic,strong) XBDataWriter *dataWriter;
 @property (nonatomic,strong) XBAACEncoder_system *aacEncoder;
+@property (nonatomic,strong) MP3Encoder *mp3Encoder;
 @end
 
 @implementation ViewController
@@ -74,7 +77,30 @@
     
 //    [self play];
     
-    [self aacEncodeTest];
+//    [self aacEncodeTest];
+    
+    [self mp3EncodeTest];
+}
+
+#pragma mark - mp3编码
+- (void)mp3EncodeTest
+{
+    [self deleteFileAtPath:mp3StroePath];
+    
+    self.recorder = [[XBAudioUnitRecorder alloc] initWithRate:XBAudioRate_44k bit:XBAudioBit_16 channel:XBAudioChannel_1];
+    
+    _mp3Encoder = [[MP3Encoder alloc] initWithSampleRate:XBAudioRate_44k channels:XBAudioChannel_1 bitRate:16];
+    
+    self.dataWriter = [[XBDataWriter alloc] init];
+    
+    typeof(self) __weak weakSelf = self;
+    self.recorder.bl_output = ^(AudioBufferList *bufferList) {
+        AudioBuffer buffer = bufferList->mBuffers[0];
+        [weakSelf.mp3Encoder encodePCMData:buffer.mData len:buffer.mDataByteSize completeBlock:^(unsigned char *encodedData, int len) {
+            [weakSelf.dataWriter writeBytes:encodedData len:len toPath:mp3StroePath];
+        }];
+    };
+    [self.recorder start];
 }
 
 #pragma mark - aac编码
@@ -113,7 +139,7 @@
     [self delete];
     self.recorder = [[XBAudioUnitRecorder alloc] initWithRate:XBAudioRate_44k bit:XBAudioBit_16 channel:XBAudioChannel_1];
 
-    AudioStreamBasicDescription desc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:XBAudioFormatID_PCM mFormatFlags:(kAudioFormatFlagIsBigEndian | kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked) mSampleRate:XBAudioRate_44k mFramesPerPacket:1 mChannelsPerFrame:XBAudioChannel_1 mBitsPerChannel:XBAudioBit_16];
+    AudioStreamBasicDescription desc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:XBAudioFormatID_PCM mFormatFlags:(XBAudioFormatFlags)(kAudioFormatFlagIsBigEndian | kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked) mSampleRate:XBAudioRate_44k mFramesPerPacket:1 mChannelsPerFrame:XBAudioChannel_1 mBitsPerChannel:XBAudioBit_16];
     self.xbFile = [[XBExtAudioFileRef alloc] initWithStorePath:stroePath inputFormat:&desc];
     
     typeof(self) __weak weakSelf = self;
@@ -174,7 +200,7 @@
 - (void)startMix
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
-    self.mixer = [[XBAudioUnitMixerTest alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
+    self.mixer = [[XBAudioUnitMixerTest alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:(XBAudioChannel)1 bit:(XBAudioBit)16];
     [self.mixer start];
 }
 
@@ -206,7 +232,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"testDecode" ofType:@"pcm"];
 //    NSString *path = stroePath;
     
-    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
+    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:(XBAudioChannel)1 bit:(XBAudioBit)16];
     
     self.palyer.delegate = self;
     [self.palyer play];
