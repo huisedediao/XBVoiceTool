@@ -20,12 +20,15 @@
 #import "XBExtAudioFileRef.h"
 #import "ExtAudioFileMixer.h"
 #import "XBDataWriter.h"
+#import "XBAACEncoder_system.h"
 
 //#define stroePath [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"recordTest.caf"]
 
 #define subPathPCM @"/Documents/xbMixData.caf"
 //#define subPathPCM @"/Documents/xbMedia.caf"
 #define stroePath [NSHomeDirectory() stringByAppendingString:subPathPCM]
+
+#define aacStroePath [NSHomeDirectory() stringByAppendingString:@"/Documents/testAAC.aac"]
 
 @interface ViewController () <XBPCMPlayerDelegate>
 @property (nonatomic,strong) XBPCMPlayer *palyer;
@@ -37,6 +40,7 @@
 //@property (nonatomic,strong) XBAudioPCMDataReader *dataReader;
 @property (nonatomic,strong) XBExtAudioFileRef *xbFile;
 @property (nonatomic,strong) XBDataWriter *dataWriter;
+@property (nonatomic,strong) XBAACEncoder_system *aacEncoder;
 @end
 
 @implementation ViewController
@@ -68,7 +72,30 @@
     
 //    [self record];
     
-    [self play];
+//    [self play];
+    
+    [self aacEncodeTest];
+}
+
+#pragma mark - aac编码
+- (void)aacEncodeTest
+{
+    [self deleteFileAtPath:aacStroePath];
+    
+    self.recorder = [[XBAudioUnitRecorder alloc] initWithRate:XBAudioRate_44k bit:XBAudioBit_16 channel:XBAudioChannel_1];
+    AudioStreamBasicDescription encoderInputDesc = [self.recorder getOutputFormat];
+    self.aacEncoder = [[XBAACEncoder_system alloc] initWithInputAudioStreamDesc:encoderInputDesc];
+    
+    self.dataWriter = [[XBDataWriter alloc] init];
+    
+    typeof(self) __weak weakSelf = self;
+    self.recorder.bl_output = ^(AudioBufferList *bufferList) {
+        AudioBuffer buffer = bufferList->mBuffers[0];
+        [weakSelf.aacEncoder encodePCMData:buffer.mData len:buffer.mDataByteSize completionBlock:^(NSData *encodedData, NSError *error) {
+            [weakSelf.dataWriter writeData:encodedData toPath:aacStroePath];
+        }];
+    };
+    [self.recorder start];
 }
 
 #pragma mark - mixTest
@@ -187,11 +214,7 @@
 }
 - (void)delete
 {
-    NSString *pcmPath = stroePath;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:pcmPath])
-    {
-        [[NSFileManager defaultManager] removeItemAtPath:pcmPath error:nil];
-    }
+    [self deleteFileAtPath:stroePath];
 }
 
 - (void)stopPlay
@@ -206,4 +229,11 @@
     self.palyer = nil;
 }
 
+- (void)deleteFileAtPath:(NSString *)path
+{
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+}
 @end

@@ -19,6 +19,7 @@
 @property (nonatomic,assign) XBAudioBit bit;
 @property (nonatomic,assign) XBAudioRate rate;
 @property (nonatomic,assign) XBAudioChannel channel;
+@property (nonatomic,assign) AudioStreamBasicDescription inputStreamDesc;
 @end
 
 @implementation XBAudioUnitRecorder
@@ -72,6 +73,7 @@
     int mFramesPerPacket = 1;
     
     AudioStreamBasicDescription inputStreamDesc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:(kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved | kAudioFormatFlagIsPacked) mSampleRate:rate mFramesPerPacket:mFramesPerPacket mChannelsPerFrame:channel mBitsPerChannel:bit];
+    self.inputStreamDesc = inputStreamDesc;
     
     OSStatus status = AudioUnitSetProperty(audioUnit,
                          kAudioUnitProperty_StreamFormat,
@@ -151,16 +153,16 @@
 
 - (AudioStreamBasicDescription)getOutputFormat
 {
-    
-    AudioStreamBasicDescription outputDesc0;
-    UInt32 size = sizeof(outputDesc0);
-    CheckError(AudioUnitGetProperty(audioUnit,
-                                    kAudioUnitProperty_StreamFormat,
-                                    kAudioUnitScope_Output,
-                                    0,
-                                    &outputDesc0,
-                                    &size),"get property failure");
-    return outputDesc0;
+    return self.inputStreamDesc;
+//    AudioStreamBasicDescription outputDesc0;
+//    UInt32 size = sizeof(outputDesc0);
+//    CheckError(AudioUnitGetProperty(audioUnit,
+//                                    kAudioUnitProperty_StreamFormat,
+//                                    kAudioUnitScope_Output,
+//                                    0,
+//                                    &outputDesc0,
+//                                    &size),"get property failure");
+//    return outputDesc0;
 }
 
 static OSStatus inputCallBackFun(    void *                            inRefCon,
