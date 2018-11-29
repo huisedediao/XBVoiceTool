@@ -176,10 +176,10 @@
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMixMusicTest" ofType:@"caf"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"pcm"];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"testRecord" ofType:@"caf"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"testDecode" ofType:@"pcm"];
 //    NSString *path = stroePath;
     
-    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_16k channels:2 bit:16];
+    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:1 bit:16];
     
     self.palyer.delegate = self;
     [self.palyer play];
@@ -202,6 +202,7 @@
 
 - (void)playToEnd:(XBPCMPlayer *)player
 {
+    NSLog(@"end play");
     self.palyer = nil;
 }
 

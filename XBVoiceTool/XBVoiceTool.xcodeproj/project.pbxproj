@@ -14,6 +14,7 @@
 		F130CAAE2105D44C000213FA /* XBAudioFileDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = F130CAAD2105D44C000213FA /* XBAudioFileDataReader.m */; };
 		F130CAB22107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F130CAB12107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 */; };
 		F130CABE21072AF1000213FA /* xbMixMusic.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F130CABD21072AF1000213FA /* xbMixMusic.pcm */; };
+		F13105B2215F2AAD005FA93A /* testDecode.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13105B1215F2AAD005FA93A /* testDecode.pcm */; };
 		F13DD77620DB885800D1519D /* 周杰伦 - 晴天.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */; };
 		F13DD77920DB8C1D00D1519D /* xbMedia1.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */; };
 		F13DD77A20DB8C1D00D1519D /* xbMedia2.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */; };
@@ -80,6 +81,7 @@
 		F130CAAD2105D44C000213FA /* XBAudioFileDataReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAudioFileDataReader.m; sourceTree = "<group>"; };
 		F130CAB12107046C000213FA /* 胡彦斌 - 为你我受冷风吹.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "胡彦斌 - 为你我受冷风吹.mp3"; sourceTree = "<group>"; };
 		F130CABD21072AF1000213FA /* xbMixMusic.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMixMusic.pcm; sourceTree = "<group>"; };
+		F13105B1215F2AAD005FA93A /* testDecode.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDecode.pcm; sourceTree = "<group>"; };
 		F13DD77520DB885800D1519D /* 周杰伦 - 晴天.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "周杰伦 - 晴天.mp3"; sourceTree = "<group>"; };
 		F13DD77720DB8C1D00D1519D /* xbMedia1.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia1.pcm; sourceTree = "<group>"; };
 		F13DD77820DB8C1D00D1519D /* xbMedia2.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = xbMedia2.pcm; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		F13DD77420DB884E00D1519D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F13105B1215F2AAD005FA93A /* testDecode.pcm */,
 				F1E2FB7F215C6898006ECE2B /* testRecord.caf */,
 				F161C7E5214121D200DE07C4 /* xbMediaNew.caf */,
 				F161C7E4214121D000DE07C4 /* xbMediaOld.caf */,
@@ -401,6 +404,7 @@
 			files = (
 				F1F83D3221096CA50005C272 /* recordTest.caf in Resources */,
 				F16F7C7420DA6D62005686CD /* LaunchScreen.storyboard in Resources */,
+				F13105B2215F2AAD005FA93A /* testDecode.pcm in Resources */,
 				F16F7C7120DA6D62005686CD /* Assets.xcassets in Resources */,
 				F11FEF3920E36F7D004691F8 /* 1530081783.caf in Resources */,
 				F1F83D2E210861F40005C272 /* xbMixMusicTest.caf in Resources */,
