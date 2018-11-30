@@ -199,7 +199,7 @@
 			path = Mp3Encoder;
 			sourceTree = "<group>";
 		};
-		F13DD76F20DB880000D1519D /* AudioPlayer */ = {
+		F13DD76F20DB880000D1519D /* AudioTool */ = {
 			isa = PBXGroup;
 			children = (
 				F130D5B321AFE2F5001D0581 /* AACEncoder */,
@@ -234,7 +234,7 @@
 				F1F83D27210751920005C272 /* XBExtAudioFileRef.h */,
 				F1F83D28210751920005C272 /* XBExtAudioFileRef.m */,
 			);
-			path = AudioPlayer;
+			path = AudioTool;
 			sourceTree = "<group>";
 		};
 		F13DD77420DB884E00D1519D /* Source */ = {
@@ -288,7 +288,7 @@
 			children = (
 				F11FEF3A20E372C3004691F8 /* lame */,
 				F13DD77420DB884E00D1519D /* Source */,
-				F13DD76F20DB880000D1519D /* AudioPlayer */,
+				F13DD76F20DB880000D1519D /* AudioTool */,
 				F16F7C6720DA6D62005686CD /* AppDelegate.h */,
 				F16F7C6820DA6D62005686CD /* AppDelegate.m */,
 				F16F7C6A20DA6D62005686CD /* ViewController.h */,
