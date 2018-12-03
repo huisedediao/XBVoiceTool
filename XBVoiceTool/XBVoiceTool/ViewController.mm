@@ -65,7 +65,7 @@
     
 //    [self mixMusic];
     
-//    [self playMP3New];
+//    [self playAACNew];
     
 //    [self playMp3];
     
@@ -169,7 +169,7 @@
 
 #pragma mark - 播放mp3
 ///通过ExtAudioFileRead
-- (void)playMP3New
+- (void)playAACNew
 {
 //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"周杰伦 - 晴天" ofType:@"mp3"];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"几个你_薛之谦" ofType:@"aac"];
