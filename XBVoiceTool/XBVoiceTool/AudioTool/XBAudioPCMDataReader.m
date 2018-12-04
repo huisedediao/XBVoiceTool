@@ -24,18 +24,21 @@
         _readerLength = 0;
         return currentReadLength;
     }
+    NSRange range;
     if (_readerLength+ len <= dataStore.length)
     {
-        _readerLength = _readerLength + len;
         currentReadLength = len;
+        range = NSMakeRange(_readerLength, currentReadLength);
+        _readerLength = _readerLength + len;
     }
     else
     {
         currentReadLength = (UInt32)(dataStore.length - _readerLength);
+        range = NSMakeRange(_readerLength, currentReadLength);
         _readerLength = (UInt32) dataStore.length;
     }
     
-    NSData *subData = [dataStore subdataWithRange:NSMakeRange(_readerLength, currentReadLength)];
+    NSData *subData = [dataStore subdataWithRange:range];
     Byte *tempByte = (Byte *)[subData bytes];
     memcpy(data,tempByte,currentReadLength);
     
