@@ -75,11 +75,11 @@
     
 //    [self record];
     
-//    [self play];
+    [self play];
     
 //    [self aacEncodeTest];
     
-    [self mp3EncodeTest];
+//    [self mp3EncodeTest];
 }
 
 #pragma mark - mp3编码
@@ -229,10 +229,10 @@
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"record" ofType:@"pcm"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xbMixMusicTest" ofType:@"caf"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"pcm"];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"testDecode" ofType:@"pcm"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"caf"];
 //    NSString *path = stroePath;
     
-    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:(XBAudioChannel)1 bit:(XBAudioBit)16];
+    self.palyer = [[XBPCMPlayer alloc] initWithPCMFilePath:path rate:XBAudioRate_44k channels:(XBAudioChannel)2 bit:(XBAudioBit)16];
     
     self.palyer.delegate = self;
     [self.palyer play];

@@ -36,6 +36,14 @@
     return self;
 }
 
+/** 读取数据
+ 获取当前已经缓冲好的长度
+ */
+- (int)availableLen
+{
+    return _availableLen;
+}
+
 /** 写入数据
  data : 要写入到缓冲池的数据
  len  : 要写入到数据的长度

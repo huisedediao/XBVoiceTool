@@ -29,4 +29,9 @@
 
 - (void)clearData;
 
+/** 读取数据
+ 获取当前已经缓冲好的长度
+ */
+- (int)availableLen;
+
 @end
