@@ -45,6 +45,11 @@
 - (void)dealloc
 {
     NSLog(@"XBAudioUnitPlayer销毁");
+    [self destroy];
+}
+
+- (void)destroy
+{
     if (audioUnit)
     {
         OSStatus status;
@@ -62,7 +67,10 @@
     [session setActive:YES error:nil];
     
     //初始化audioUnit
-    AudioComponentDescription outputDesc = [XBAudioTool allocAudioComponentDescriptionWithComponentType:kAudioUnitType_Output componentSubType:kAudioUnitSubType_VoiceProcessingIO componentFlags:0 componentFlagsMask:0];
+    AudioComponentDescription outputDesc = [XBAudioTool allocAudioComponentDescriptionWithComponentType:kAudioUnitType_Output
+                                                                                       componentSubType:kAudioUnitSubType_VoiceProcessingIO
+                                                                                         componentFlags:0
+                                                                                     componentFlagsMask:0];
     AudioComponent outputComponent = AudioComponentFindNext(NULL, &outputDesc);
     AudioComponentInstanceNew(outputComponent, &audioUnit);
     
@@ -71,7 +79,12 @@
     //设置输出格式
     int mFramesPerPacket = 1;
     
-    AudioStreamBasicDescription streamDesc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM mFormatFlags:(kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved) mSampleRate:rate mFramesPerPacket:mFramesPerPacket mChannelsPerFrame:channel mBitsPerChannel:bit];
+    AudioStreamBasicDescription streamDesc = [XBAudioTool allocAudioStreamBasicDescriptionWithMFormatID:kAudioFormatLinearPCM
+                                                                                           mFormatFlags:(kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsNonInterleaved)
+                                                                                            mSampleRate:rate
+                                                                                       mFramesPerPacket:mFramesPerPacket
+                                                                                      mChannelsPerFrame:channel
+                                                                                        mBitsPerChannel:bit];
     
     OSStatus status = AudioUnitSetProperty(audioUnit,
                                            kAudioUnitProperty_StreamFormat,
@@ -94,7 +107,6 @@
     CheckError(status, "SetProperty EnableIO failure");
 }
 
-
 - (void)start
 {
     if (audioUnit == nil)
@@ -114,6 +126,7 @@
     status = AudioOutputUnitStop(audioUnit);
     CheckError(status, "audioUnit停止失败");
 }
+
 static OSStatus outputCallBackFun(    void *                            inRefCon,
                                   AudioUnitRenderActionFlags *    ioActionFlags,
                                   const AudioTimeStamp *            inTimeStamp,

@@ -25,4 +25,5 @@ typedef void (^XBAudioUnitPlayerInputBlockFull)(XBAudioUnitPlayer *player,
 - (instancetype)initWithRate:(XBAudioRate)rate bit:(XBAudioBit)bit channel:(XBAudioChannel)channel;
 - (void)start;
 - (void)stop;
+- (void)destroy;
 @end
