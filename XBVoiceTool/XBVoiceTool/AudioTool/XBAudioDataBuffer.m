@@ -21,6 +21,17 @@
 
 @implementation XBAudioDataBuffer
 
+- (instancetype)init
+{
+    if (self = [super init])
+    {
+        _lock = [NSLock new];
+        _buf_size = 1024 * 1024;
+        _dataBuffer = (char *)malloc(_buf_size * sizeof(char));
+    }
+    return self;
+}
+
 /**
  bufferSize : 缓冲池最大长度
  */
